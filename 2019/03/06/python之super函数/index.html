@@ -18,7 +18,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/03/06/python之super函数/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/03/06/python之super函数/1.png">
-<meta property="og:updated_time" content="2019-03-07T14:41:55.169Z">
+<meta property="og:updated_time" content="2019-03-08T14:57:45.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python之super()函数">
 <meta name="twitter:description" content="简介说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。实验前的注意点（一） 关于新式类本文默认采用的是Python3，也就是说：本文所定义的类都是新式类。如果你用到是Python2的话，记得继承object。在这里，为了避免出现不必要的麻烦，我们">
@@ -178,54 +178,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h4 id="说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"><a href="#说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。" class="headerlink" title="说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"></a>说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。</h4><h4 id="本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。"><a href="#本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。" class="headerlink" title="本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。"></a>本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。</h4><h2 id="实验前的注意点"><a href="#实验前的注意点" class="headerlink" title="实验前的注意点"></a>实验前的注意点</h2><h4 id="（一）-关于新式类"><a href="#（一）-关于新式类" class="headerlink" title="（一） 关于新式类"></a>（一） 关于新式类</h4><p>本文默认采用的是Python3，也就是说：本文所定义的类都是新式类。如果你用到是Python2的话，记得继承object。<br>在这里，为了避免出现不必要的麻烦，我们最好全部继承object类。</p>
-<pre><code># Python 3
-class A:
-    pass
-
-# Python 2
-class A(object):
-    pass
-</code></pre><h4 id="（二）-一点小小的区别"><a href="#（二）-一点小小的区别" class="headerlink" title="（二） 一点小小的区别"></a>（二） 一点小小的区别</h4><p>Python3可以使用直接使用 super().xxx 代替 super(Class, self).xxx</p>
-<pre><code># 默认，Python 3
-class B(A):
-    def add(self, x):
-        super().add(x)
-
-# Python 2
-class B(A):
-    def add(self, x):
-        super(B, self).add(x)
-</code></pre><p>所以，你如果用的是Python2的话，记得将本文的super()替换为suepr(Class, self)。</p>
-<h4 id="（三）-单继承"><a href="#（三）-单继承" class="headerlink" title="（三） 单继承"></a>（三） 单继承</h4><p>在单继承中，spuer()主要是用来调用父类方法：</p>
-<pre><code>class A(object):
-    def __init__(self):
-        self.x = 10
-
-    def add(self, y):
-        print(&apos;self_A is at {0}&apos;.format(self))
-        self.x += y
-
-class B(A):
-    def __init__(self):
-        self.x = 20
-
-    def add(self, y):
-        print(&apos;self_B is at {0}&apos;.format(self))
-        super().add(y)
-        self.x += 5
-a = A()
-b = B()
-
-print(a.x)
-print(b.x)
-
-a.add(1)
-b.add(1)
-
-print(b.x)
-print(a.x)
-</code></pre><p>代码执行后结果会是什么样呢？</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h4 id="说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"><a href="#说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。" class="headerlink" title="说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"></a>说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。</h4><h4 id="本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。"><a href="#本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。" class="headerlink" title="本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。"></a>本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。</h4><h2 id="实验前的注意点"><a href="#实验前的注意点" class="headerlink" title="实验前的注意点"></a>实验前的注意点</h2><h4 id="（一）-关于新式类"><a href="#（一）-关于新式类" class="headerlink" title="（一） 关于新式类"></a>（一） 关于新式类</h4><p>本文默认采用的是Python3，也就是说：本文所定义的类都是新式类。如果你用到是Python2的话，记得继承object。<br>在这里，为了避免出现不必要的麻烦，我们最好全部继承object类。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python 3</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="（二）-一点小小的区别"><a href="#（二）-一点小小的区别" class="headerlink" title="（二） 一点小小的区别"></a>（二） 一点小小的区别</h4><p>Python3可以使用直接使用 super().xxx 代替 super(Class, self).xxx<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认，Python 3</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        super().add(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        super(B, self).add(x)</span><br></pre></td></tr></table></figure></p>
+<p>所以，你如果用的是Python2的话，记得将本文的super()替换为suepr(Class, self)。</p>
+<h4 id="（三）-单继承"><a href="#（三）-单继承" class="headerlink" title="（三） 单继承"></a>（三） 单继承</h4><p>在单继承中，spuer()主要是用来调用父类方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_A is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        self.x += y</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">20</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_B is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">a = A()</span><br><span class="line">b = B()</span><br><span class="line"></span><br><span class="line">print(a.x)</span><br><span class="line">print(b.x)</span><br><span class="line"></span><br><span class="line">a.add(<span class="number">1</span>)</span><br><span class="line">b.add(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">print(b.x)</span><br><span class="line">print(a.x)</span><br></pre></td></tr></table></figure></p>
+<p>代码执行后结果会是什么样呢？</p>
 <pre><code>10
 20
 self_A is at &lt;__main__.A object at 0x7f1b10adbb38&gt;
@@ -236,163 +193,25 @@ self_A is at &lt;__main__.B object at 0x7f1b10adbb70&gt;
 </code></pre><p>是不是对执行结果感到一丝丝疑惑呢？下面我们来对代码的执行过程做一个深入解读：</p>
 <p>首先创建了 a, b 两个对象<br>然后分别打印了两个对象的初始化属性 x 的值， 分别是 10 和 20，<br>接下来，对象a调用实例中的add()方法，打印了实例对象a所在的地址，<br>也就是self_A is at &lt;<strong>main</strong>.A object at 0x7f1b10adbb38&gt;，并将实例属性 x 的值加上传入的参数 y；<br>之后实例对象b调用重写之后的add()方法，并传入参数 y=1，首先打印出实例对象b所在的内存地址，接着调用父类的add()方法，<br>此时，父类的self指向了实例对象b的引用，并执行相应的代码，此时 b.x = 21，<br>最后执行self.x += 5，此时 b.x = 26</p>
 <h4 id="（四）-多继承"><a href="#（四）-多继承" class="headerlink" title="（四） 多继承"></a>（四） 多继承</h4><p>我们继续引入类C和类D</p>
-<pre><code>class C(A):
-    def __init__(self):
-        self.x = 4
-
-    def add(self, y):
-        print(&apos;self_C is at {0}&apos;.format(self))
-        super().add(y)
-        self.x += 4
-
-
-class D(B, C):
-    def __init__(self):
-        self.x = 5
-
-    def add(self, y):
-        print(&apos;self_D is at {0}&apos;.format(self))
-        super().add(y)
-        self.x += 5
-</code></pre><p>执行以下代码</p>
-<pre><code>d = D()
-d.add(2)
-print(d.x)
-</code></pre><p>输出结果为</p>
-<pre><code>self_D is at &lt;__main__.D object at 0x7f7aa0ebbf60&gt;
-self_B is at &lt;__main__.D object at 0x7f7aa0ebbf60&gt;
-self_C is at &lt;__main__.D object at 0x7f7aa0ebbf60&gt;
-self_A is at &lt;__main__.D object at 0x7f7aa0ebbf60&gt;
-21
-</code></pre><p>下面我们来具体分析一下:</p>
-<p>D 的 MRO 是: <code>[D, B, C, A, object]</code> 。 备注: 可以通过 D.mro() (Python 2 使用 D.__mro__ ) 来查看 D 的 MRO 信息）</p>
-<p>详细的代码分析如下:</p>
-<pre><code>class A:
-    def __init__(self):
-        self.x = 10
-
-    def add(self, y):
-        # 第四步
-        # 来自 D.add 中的 super
-        # self == d, self.x == d.x == 5
-        print(&apos;self is at {0}&apos;.format(self))
-        self.x += y
-        # d.x == 7
-
-
-class B(A):
-    def __init__(self):
-        self.x = 20
-
-    def add(self, y):
-        # 第二步
-        # 来自 D.add 中的 super
-        # self == d, self.x == d.x == 5
-        print(&apos;self_B is at {0}&apos;.format(self))
-        # 等价于 suepr(B, self).add(y)
-        # self 的 MRO 是 [D, B, C, A, object]
-        # 从 B 之后的 [C, A, object] 中查找 add 方法
-        super().add(y)
-
-        # 第六步
-        # d.x = 11
-        self.x += 5
-        # d.x = 16
-
-class C(A):
-    def __init__(self):
-        self.x = 4
-
-    def add(self, y):
-        # 第三步
-        # 来自 B.add 中的 super
-        # self == d, self.x == d.x == 5
-        print(&apos;self_C is at {0}&apos;.format(self))
-        # 等价于 suepr(C, self).add(y)
-        # self 的 MRO 是 [D, B, C, A, object]
-        # 从 C 之后的 [A, object] 中查找 add 方法
-        super().add(y)
-
-        # 第五步
-        # d.x = 7
-        self.x += 4
-        # d.x = 11
-
-
-class D(B, C):
-    def __init__(self):
-        self.x = 5
-
-    def add(self, y):
-        # 第一步
-        print(&apos;self_D is at {0}&apos;.format(self))
-        # 等价于 super(D, self).add(y)
-        # self 的 MRO 是 [D, B, C, A, object]
-        # 从 D 之后的 [B, C, A, object] 中查找 add 方法
-        super().add(y)
-
-        # 第七步
-        # d.x = 16
-        self.x += 5
-        # self.x = 21
-
-d = D()
-d.add(2)
-print(d.x)
-</code></pre><p>调用过程如下图：</p>
-<pre><code>D.mro() == [D, B, C, A, object]
-d = D()
-d.n == 5
-d.add(2)
-
-class D(B, C):          class B(A):            class C(A):             class A:
-    def add(self, m):       def add(self, m):      def add(self, m):       def add(self, m):
-        super().add(m)  1.---&gt;  super().add(m) 2.---&gt;  super().add(m)  3.---&gt;  self.n += m
-        self.n += 5   &lt;------6. self.n += 3    &lt;----5. self.n += 4     &lt;----4. &lt;--|
-        (14+5=19)               (11+3=14)              (7+4=11)                (5+2=7)
-</code></pre><p><img src="/2019/03/06/python之super函数/2.png" alt></p>
-<h4 id="（五）-super方法和普通方法的区别"><a href="#（五）-super方法和普通方法的区别" class="headerlink" title="（五） super方法和普通方法的区别"></a>（五） super方法和普通方法的区别</h4><p>假设Base是基类</p>
-<pre><code>class Base(object):
-    　 def __init__(self):
-       　　　　print “Base init”
-</code></pre><p>则普通方法如下：</p>
-<pre><code>class Leaf(Base):
-   def __init__(self):
-          Base.__init__(self)
-          print “Leaf init”
-</code></pre><p>super方法如下：</p>
-<pre><code>class Leaf(Base):
-       def __init__(self):
-              super(Leaf, self).__init__()
-              print “Leaf init”
-</code></pre><p>在上面的简单场景下，两种方法的效果一致：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">4</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_C is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_D is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">  </span><br><span class="line">执行以下代码</span><br><span class="line"></span><br><span class="line">    d = D()</span><br><span class="line">    d.add(<span class="number">2</span>)</span><br><span class="line">    print(d.x)</span><br></pre></td></tr></table></figure>
+<p>输出结果为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">self_D <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_B <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_C <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_A <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line"><span class="number">21</span></span><br></pre></td></tr></table></figure></p>
+<p>下面我们来具体分析一下:</p>
+<p>D 的 MRO 是: [D, B, C, A, object] 。 备注: 可以通过 D.mro() (Python 2 使用 D.__mro__ ) 来查看 D 的 MRO 信息）</p>
+<p>详细的代码分析如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第四步</span></span><br><span class="line">        <span class="comment"># 来自 D.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        self.x += y</span><br><span class="line">        <span class="comment"># d.x == 7</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">20</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第二步</span></span><br><span class="line">        <span class="comment"># 来自 D.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self_B is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 suepr(B, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 B 之后的 [C, A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第六步</span></span><br><span class="line">        <span class="comment"># d.x = 11</span></span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">        <span class="comment"># d.x = 16</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">4</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第三步</span></span><br><span class="line">        <span class="comment"># 来自 B.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self_C is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 suepr(C, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 C 之后的 [A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第五步</span></span><br><span class="line">        <span class="comment"># d.x = 7</span></span><br><span class="line">        self.x += <span class="number">4</span></span><br><span class="line">        <span class="comment"># d.x = 11</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第一步</span></span><br><span class="line">        print(<span class="string">'self_D is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 super(D, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 D 之后的 [B, C, A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第七步</span></span><br><span class="line">        <span class="comment"># d.x = 16</span></span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">        <span class="comment"># self.x = 21</span></span><br><span class="line"></span><br><span class="line">d = D()</span><br><span class="line">d.add(<span class="number">2</span>)</span><br><span class="line">print(d.x)</span><br></pre></td></tr></table></figure></p>
+<p>调用过程如下图：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">D.mro() == [D, B, C, A, object]</span><br><span class="line">d = D()</span><br><span class="line">d.n == <span class="number">5</span></span><br><span class="line">d.add(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span>          <span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span>            <span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span>             <span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>       <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>      <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>       <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span></span><br><span class="line">        super().add(m)  1.---&gt;  super().add(m) 2.---&gt;  super().add(m)  3.---&gt;  self.n += m</span><br><span class="line">        self.n += <span class="number">5</span>   &lt;-----<span class="number">-6.</span> self.n += <span class="number">3</span>    &lt;---<span class="number">-5.</span> self.n += <span class="number">4</span>     &lt;---<span class="number">-4.</span> &lt;--|</span><br><span class="line">        (<span class="number">14</span>+<span class="number">5</span>=<span class="number">19</span>)               (<span class="number">11</span>+<span class="number">3</span>=<span class="number">14</span>)              (<span class="number">7</span>+<span class="number">4</span>=<span class="number">11</span>)                (<span class="number">5</span>+<span class="number">2</span>=<span class="number">7</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2019/03/06/python之super函数/2.png" alt></p>
+<h4 id="（五）-super方法和普通方法的区别"><a href="#（五）-super方法和普通方法的区别" class="headerlink" title="（五） super方法和普通方法的区别"></a>（五） super方法和普通方法的区别</h4><p>假设Base是基类<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> “Base init”</span><br></pre></td></tr></table></figure></p>
+<p>则普通方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Base)</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">          Base.__init__(self)</span><br><span class="line">          <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
+<p>super方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
+<p>在上面的简单场景下，两种方法的效果一致：</p>
 <pre><code>&gt;&gt;&gt; leaf = Leaf()
 
 Base init
 
 Leaf init
 </code></pre><h4 id="（六）钻石继承的挑战"><a href="#（六）钻石继承的挑战" class="headerlink" title="（六）钻石继承的挑战"></a>（六）钻石继承的挑战</h4><p>当我们来到钻石继承场景时，我们就遇到了一个难题：<br><img src="/2019/03/06/python之super函数/1.png" alt></p>
-<p>尝试以下代码：</p>
-<pre><code>class Base(object):
-       def __init__(self):
-              print “Base init”
-
-class Medium1(Base):
-       def __init__(self):
-              Base.__init__(self)
-              print “Medium1 init”
-
-class Medium2(Base):
-       def __init__(self):
-              Base.__init__(self)
-              print “Medium2 init”
-
-class Leaf(Medium1, Medium2):
-       def __init__(self):
-              Medium1.__init__(self)
-              Medium2.__init__(self)
-              print “Leaf init”    
-</code></pre><p>当我们生成Leaf对象时，会产生以下问题：</p>
+<p>尝试以下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              <span class="keyword">print</span> “Base init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium1</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Base.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Medium1 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium2</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Base.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Medium2 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Medium1.__init__(self)</span><br><span class="line">              Medium2.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
+<p>当我们生成Leaf对象时，会产生以下问题：</p>
 <pre><code>&gt;&gt;&gt; leaf = Leaf()
 
 Base init
@@ -413,26 +232,8 @@ Leaf init
 <h5 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h5><p>Ruby禁止使用多继承。</p>
 <p>Ruby和Java一样只支持单继承，但它对多继承的替代方式和Java不同。Ruby使用Mixin的方式来替代，在当前类中mixin入其他模块，来做到代码的组装效果。</p>
 <h5 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h5><p>Python和C++一样，支持多继承的语法。但Python的解决思路和C++完全不一样，Python使用的是super</p>
-<p>我们把第2章的钻石继承用super重写一下，看一下输出结果：</p>
-<pre><code>class Base(object):
-       def __init__(self):
-              print “Base init”
-
-class Medium1(Base):
-       def __init__(self):
-              super(Medium1, self).__init__()
-              print “Medium1 init”
-
-class Medium2(Base):
-       def __init__(self):
-              super(Medium2, self).__init__()
-              print “Medium2 init”
-
-class Leaf(Medium1, Medium2):
-       def __init__(self):
-              super(Leaf, self).__init__()
-              print “Leaf init”        
-</code></pre><p>我们生成Leaf对象</p>
+<p>我们把第2章的钻石继承用super重写一下，看一下输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              <span class="keyword">print</span> “Base init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium1</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Medium1, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Medium1 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium2</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Medium2, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Medium2 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
+<p>我们生成Leaf对象</p>
 <pre><code>&gt;&gt;&gt; leaf = Leaf()
 
 Base init
@@ -463,21 +264,14 @@ class super(object)
     super(type) -&gt; unbound super object
     super(type, type2) -&gt; bound super object; requires issubclass(type2, type)
 </code></pre><p>光从字面来看，这可以算是python中最语焉不详的帮助文档之一了。甚至里面还有一些术语误用。那super究竟应该怎么用呢，我们重点来看super中的第1和第3种用法</p>
-<h5 id="1-super-type-obj"><a href="#1-super-type-obj" class="headerlink" title="1. super(type, obj)"></a>1. super(type, obj)</h5><pre><code>class Leaf(Medium1, Medium2):
-       def __init__(self):
-              super(Leaf, self).__init__()
-              print “Leaf init”
-</code></pre><p>super(Leaf, self).<strong>init</strong>()的意思是说：</p>
+<h5 id="1-super-type-obj"><a href="#1-super-type-obj" class="headerlink" title="1. super(type, obj)"></a>1. super(type, obj)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure>
+<p>super(Leaf, self).<strong>init</strong>()的意思是说：</p>
 <pre><code>1.获取self所属类的mro, 也就是[Leaf, Medium1, Medium2, Base]
 2.从mro中Leaf右边的一个类开始，依次寻找__init__函数。这里是从Medium1开始寻找
 3.一旦找到，就把找到的__init__函数绑定到self对象，并返回
 </code></pre><p>从这个执行流程可以看到，如果我们不想调用Medium1的<strong>init</strong>，而想要调用Medium2的<strong>init</strong>，那么super应该写成：super(Medium1, self)<strong>init</strong>() </p>
-<h5 id="2-super-type-type2"><a href="#2-super-type-type2" class="headerlink" title="2. super(type, type2)"></a>2. super(type, type2)</h5><pre><code>class Leaf(Medium1, Medium2):
-       def __new__(cls):
-              obj = super(Leaf, cls).__new__(cls)
-              print “Leaf new”
-              return obj
-</code></pre><p>super(Leaf, cls).<strong>new</strong>(cls)的意思是说：</p>
+<h5 id="2-super-type-type2"><a href="#2-super-type-type2" class="headerlink" title="2. super(type, type2)"></a>2. super(type, type2)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls)</span>:</span></span><br><span class="line">              obj = super(Leaf, cls).__new__(cls)</span><br><span class="line">              <span class="keyword">print</span> “Leaf new”</span><br><span class="line">              <span class="keyword">return</span> obj</span><br></pre></td></tr></table></figure>
+<p>super(Leaf, cls).<strong>new</strong>(cls)的意思是说：</p>
 <pre><code>1.获取cls这个类的mro，这里也是[Leaf, Medium1, Medium2, Base]
 2.从mro中Leaf右边的一个类开始，依次寻找__new__函数
 3.一旦找到，就返回“非绑定”的__new__函数
@@ -576,20 +370,15 @@ class super(object)
   
 <nav id="article-nav">
   
-    <a href="/2019/03/07/mySon/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/08/super之回炉再造/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          mySon
+          super之回炉再造
         
       </div>
     </a>
   
-  
-    <a href="/2019/03/06/python之new-方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">__new__方法</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -711,10 +500,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
