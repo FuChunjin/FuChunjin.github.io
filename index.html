@@ -153,6 +153,167 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-super随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/12/super随笔/">super随笔</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/12/super随笔/" class="archive-article-date">
+  	<time datetime="2019-03-12T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##一点小引申<br>这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码：</p>
+<pre><code>class A(object):
+    def __init__(self):
+        print(&apos;a.__init__&apos;)
+
+class B(object):
+    def __init__(self):
+        print(&apos;b.__init__&apos;)
+
+class C(object):
+    def __init__(self):
+        print(&apos;c.__init__&apos;)
+
+class D(A, B):
+    def __init__(self):
+        print(&apos;d.__init__&apos;)
+
+
+class E(B, C):
+    def __init__(self):
+        print(&apos;e.__init__&apos;)
+
+class F(D, E):
+    def __init__(self):
+        super(A, self).__init__()
+
+f = F()
+super(E, f).__init__()
+</code></pre><p>执行结果如下：</p>
+<pre><code>e.__init__
+b.__init__
+</code></pre><p>我们通过super在外部调用了父类的初始化方法，这里要注意的是，这里因为是初始化方法，实际上会先调用 F() 对象的初始化方法，然后再调用父类的初始化<br>方法，一定要注意这里的调用顺序。</p>
+<p>在tornado中我们也可以对某些类进行封装，先来看一段tornado的一个小例子：</p>
+<pre><code># tornado的基础web框架模块
+import tornado.web
+# tornado的核心IO循环模块，封装了LINUX的epoll和BSD的kqueue,是tornado高效率的基础
+import tornado.ioloop
+
+# 一个业务处理类
+class IndexHandler(tornado.web.RequestHandler):
+    # 处理get请求，不能处理post请求
+    def get(self):
+        # 对应HTTP请求的方法，给浏览器响应信息
+        self.write(&apos;Hello World&apos;)
+
+def main():
+    # 实例化一个app的对象
+    # Application是tornado web核心框架的核心应用类，是与服务器对应的接口
+    # 里面包含了路由映射表，有一个listen方法，用来创建一个http服务器的实例，并绑定了端口
+    app = tornado.web.Application([(r&apos;/&apos;, IndexHandler)])
+    # 绑定监听端口 注意：此时服务器并没有开启监听！
+    app.listen(8000)
+    # IOLoop.current()：返回当前线程的IOLoop实例
+    # start():启动IOLoop实例的I/O循环，同时开启了监听
+    tornado.ioloop.IOLoop.current().start()
+
+if __name__ == &apos;__main__&apos;:
+    main()
+</code></pre><p>为了实现封装，我们可以将所有的Handler写到一个index目录下，之后可以用index.***Handler进行调用；除此之外，我们可以将实例化的app对象独立出来，<br>为此，我们可以重新定义一个Application类，这个类继承tornado.web.Application父类，并重写初始化方法，在初始化方法里面，我们定义自己需要的所有<br>路由映射表和对应的Handler，并把它们当做参数，传给父类的初始化方法，请看下面的例子：</p>
+<pre><code>class A(object):
+    def __init__(self, a):
+        self.a = a
+
+
+
+class B(A):
+    def __init__(self, b):
+        self.a = b
+        print(self.a)
+        a = 10
+        super(B, self).__init__(a)
+
+b = B(20)
+print(b.a)
+</code></pre><p>执行结果：</p>
+<pre><code>&gt;&gt;&gt;
+20
+10
+</code></pre><p>我们拿实际的tornado再来举一个例子：</p>
+<pre><code>import tornado.web
+from views import index
+
+class Application(tornado.web.Application):
+    def __init__(self):
+        handlers = [
+            (r&apos;/index&apos;, index.IndexHandler),    
+        ]
+        super(Application,self).__init__(handlers)
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/12/super随笔/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-super之回炉再造" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -512,6 +673,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

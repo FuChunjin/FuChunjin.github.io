@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/3 | Blog Of JustWander</title>
+  <title>super随笔 | Blog Of JustWander</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Of JustWander">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+  <meta name="description" content="##一点小引申这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码： class A(object):     def __init__(self):         print(&amp;apos;a.__init__&amp;apos;)  class B(object):     def __init__(self):         p">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="super随笔">
+<meta property="og:url" content="http://yoursite.com/2019/03/12/super随笔/index.html">
 <meta property="og:site_name" content="Blog Of JustWander">
+<meta property="og:description" content="##一点小引申这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码： class A(object):     def __init__(self):         print(&amp;apos;a.__init__&amp;apos;)  class B(object):     def __init__(self):         p">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-12T15:12:53.709Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog Of JustWander">
+<meta name="twitter:title" content="super随笔">
+<meta name="twitter:description" content="##一点小引申这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码： class A(object):     def __init__(self):         print(&amp;apos;a.__init__&amp;apos;)  class B(object):     def __init__(self):         p">
   
     <link rel="alternative" href="/atom.xml" title="Blog Of JustWander" type="application/atom+xml">
   
@@ -151,36 +155,143 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-super随笔" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/super随笔/" class="archive-article-date">
-  	<time datetime="2019-03-12T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/super随笔/">super随笔</a>
+    <h1 class="article-title" itemprop="name">
+      super随笔
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/12/super随笔/" class="archive-article-date">
+  	<time datetime="2019-03-12T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##一点小引申<br>这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码：</p>
+<pre><code>class A(object):
+    def __init__(self):
+        print(&apos;a.__init__&apos;)
+
+class B(object):
+    def __init__(self):
+        print(&apos;b.__init__&apos;)
+
+class C(object):
+    def __init__(self):
+        print(&apos;c.__init__&apos;)
+
+class D(A, B):
+    def __init__(self):
+        print(&apos;d.__init__&apos;)
+
+
+class E(B, C):
+    def __init__(self):
+        print(&apos;e.__init__&apos;)
+
+class F(D, E):
+    def __init__(self):
+        super(A, self).__init__()
+
+f = F()
+super(E, f).__init__()
+</code></pre><p>执行结果如下：</p>
+<pre><code>e.__init__
+b.__init__
+</code></pre><p>我们通过super在外部调用了父类的初始化方法，这里要注意的是，这里因为是初始化方法，实际上会先调用 F() 对象的初始化方法，然后再调用父类的初始化<br>方法，一定要注意这里的调用顺序。</p>
+<p>在tornado中我们也可以对某些类进行封装，先来看一段tornado的一个小例子：</p>
+<pre><code># tornado的基础web框架模块
+import tornado.web
+# tornado的核心IO循环模块，封装了LINUX的epoll和BSD的kqueue,是tornado高效率的基础
+import tornado.ioloop
+
+# 一个业务处理类
+class IndexHandler(tornado.web.RequestHandler):
+    # 处理get请求，不能处理post请求
+    def get(self):
+        # 对应HTTP请求的方法，给浏览器响应信息
+        self.write(&apos;Hello World&apos;)
+
+def main():
+    # 实例化一个app的对象
+    # Application是tornado web核心框架的核心应用类，是与服务器对应的接口
+    # 里面包含了路由映射表，有一个listen方法，用来创建一个http服务器的实例，并绑定了端口
+    app = tornado.web.Application([(r&apos;/&apos;, IndexHandler)])
+    # 绑定监听端口 注意：此时服务器并没有开启监听！
+    app.listen(8000)
+    # IOLoop.current()：返回当前线程的IOLoop实例
+    # start():启动IOLoop实例的I/O循环，同时开启了监听
+    tornado.ioloop.IOLoop.current().start()
+
+if __name__ == &apos;__main__&apos;:
+    main()
+</code></pre><p>为了实现封装，我们可以将所有的Handler写到一个index目录下，之后可以用index.***Handler进行调用；除此之外，我们可以将实例化的app对象独立出来，<br>为此，我们可以重新定义一个Application类，这个类继承tornado.web.Application父类，并重写初始化方法，在初始化方法里面，我们定义自己需要的所有<br>路由映射表和对应的Handler，并把它们当做参数，传给父类的初始化方法，请看下面的例子：</p>
+<pre><code>class A(object):
+    def __init__(self, a):
+        self.a = a
+
+
+
+class B(A):
+    def __init__(self, b):
+        self.a = b
+        print(self.a)
+        a = 10
+        super(B, self).__init__(a)
+
+b = B(20)
+print(b.a)
+</code></pre><p>执行结果：</p>
+<pre><code>&gt;&gt;&gt;
+20
+10
+</code></pre><p>我们拿实际的tornado再来举一个例子：</p>
+<pre><code>import tornado.web
+from views import index
+
+class Application(tornado.web.Application):
+    def __init__(self):
+        handlers = [
+            (r&apos;/index&apos;, index.IndexHandler),    
+        ]
+        super(Application,self).__init__(handlers)
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -192,73 +303,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/12/super随笔/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/08/super之回炉再造/" class="archive-article-date">
-  	<time datetime="2019-03-08T14:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/08/super之回炉再造/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">super之回炉再造</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/08/super之回炉再造/">super之回炉再造</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/python之super函数/" class="archive-article-date">
-  	<time datetime="2019-03-06T15:07:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/python之super函数/">python之super()函数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -281,8 +425,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
