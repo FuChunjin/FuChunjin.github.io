@@ -6,16 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/3 | Blog Of JustWander</title>
+  <title>深拷贝和浅拷贝 | Blog Of JustWander</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Of JustWander">
-<meta property="og:url" content="http://yoursite.com/archives/2019/03/index.html">
+  <meta name="description" content="深拷贝和浅拷贝简析今天简单的聊一下python里面的深拷贝和浅拷贝，先来看一下代码： 123456789a = [1, 2, 3]b = aprint(b)print(id(a))print(id(b))print(a == b)print(a is b) 执行结果： 12345[1, 2, 3]139948120346248139948120346248TrueTrue 我们发现python里面">
+<meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深拷贝和浅拷贝">
+<meta property="og:url" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/index.html">
 <meta property="og:site_name" content="Blog Of JustWander">
+<meta property="og:description" content="深拷贝和浅拷贝简析今天简单的聊一下python里面的深拷贝和浅拷贝，先来看一下代码： 123456789a = [1, 2, 3]b = aprint(b)print(id(a))print(id(b))print(a == b)print(a is b) 执行结果： 12345[1, 2, 3]139948120346248139948120346248TrueTrue 我们发现python里面">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/4.png">
+<meta property="og:updated_time" content="2019-03-13T17:03:49.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog Of JustWander">
+<meta name="twitter:title" content="深拷贝和浅拷贝">
+<meta name="twitter:description" content="深拷贝和浅拷贝简析今天简单的聊一下python里面的深拷贝和浅拷贝，先来看一下代码： 123456789a = [1, 2, 3]b = aprint(b)print(id(a))print(id(b))print(a == b)print(a is b) 执行结果： 12345[1, 2, 3]139948120346248139948120346248TrueTrue 我们发现python里面">
+<meta name="twitter:image" content="http://yoursite.com/2019/03/13/深拷贝和浅拷贝/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Blog Of JustWander" type="application/atom+xml">
   
@@ -151,141 +160,181 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-深拷贝和浅拷贝" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      深拷贝和浅拷贝
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/13/深拷贝和浅拷贝/" class="archive-article-date">
+
+        
+        <a href="/2019/03/13/深拷贝和浅拷贝/" class="archive-article-date">
   	<time datetime="2019-03-13T14:41:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-13</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/13/深拷贝和浅拷贝/">深拷贝和浅拷贝</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="深拷贝和浅拷贝简析"><a href="#深拷贝和浅拷贝简析" class="headerlink" title="深拷贝和浅拷贝简析"></a>深拷贝和浅拷贝简析</h2><p>今天简单的聊一下python里面的深拷贝和浅拷贝，先来看一下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">b = a</span><br><span class="line"></span><br><span class="line">print(b)</span><br><span class="line">print(id(a))</span><br><span class="line">print(id(b))</span><br><span class="line">print(a == b)</span><br><span class="line">print(a <span class="keyword">is</span> b)</span><br></pre></td></tr></table></figure>
+<p>执行结果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="number">139948120346248</span></span><br><span class="line"><span class="number">139948120346248</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<p>我们发现python里面的赋值过程，并非是拷贝了这个对象，而仅仅是拷贝了这个对象的引用，通过打印a和b的内存地址我们也可以发现这一点。<br>像这种，仅仅是指向了对象的引用，并非是把原对象搬对来据为己有的这种赋值或者是拷贝，就是浅拷贝。</p>
+<p>那么什么是深拷贝呢？请看一下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">c = copy.deepcopy(a)</span><br><span class="line">print(c)</span><br><span class="line">print(id(a))</span><br><span class="line">print(id(c))</span><br><span class="line">print(a == c)</span><br><span class="line">print(a <span class="keyword">is</span> c)</span><br></pre></td></tr></table></figure>
+<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="number">140391002435208</span></span><br><span class="line"><span class="number">140391002435464</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure></p>
+<p>这里c相当于把a的一整套东西全都搬了过来，因此实现了深拷贝，并且自己有了新的地址空间。</p>
+<h2 id="再思考"><a href="#再思考" class="headerlink" title="再思考"></a>再思考</h2><p>这次我们首先引入两个列表：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+<p>然后，我们再创建一个列表c，把a和b的引用传进去：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c = [a, b]</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/13/深拷贝和浅拷贝/1.png" alt></p>
+<p>我们再创建一个列表e，这个列表保存了c的深拷贝：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.deepcopy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br></pre></td></tr></table></figure></p>
+<p>有一点我们可以肯定的是，c和e的地址肯定是不同的，但这里的疑问是，e里面肯定也保存了两个地址，那么这两个地址是否是a和b的引用呢？还是额外开辟的空间里面保存了a和b的内容呢？<br><img src="/2019/03/13/深拷贝和浅拷贝/2.png" alt></p>
+<p>我们编写以下的代码验证这个问题：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = [a, b]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.deepcopy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
+<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">139925641670472</span></span><br><span class="line"><span class="number">139925641661896</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
+<p>由此我们可以看出：e实际上连同a,b里面的内容也进行了深拷贝，这也证明深拷贝是一种递归拷贝。</p>
+<p>除了copy.deepcopy()，与它相对应的还有一种拷贝，就是copy.copy()，请看下面代码，只是把deepcopy换成了copy:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = [a, b]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.copy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<p>这次的执行结果还是有些区别的:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">140409381363528</span></span><br><span class="line"><span class="number">140409381354952</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，copy.copy并没有把a和b的内容拷贝下来，整体来说，copy仅仅是拷贝了第一层，而deepcopy则是进行了递归拷贝，下面的这张图很好的说明了它们之间的区别：<br><img src="/2019/03/13/深拷贝和浅拷贝/3.png" alt></p>
+<h2 id="深拷贝和浅拷贝在拷贝元组时的不同点"><a href="#深拷贝和浅拷贝在拷贝元组时的不同点" class="headerlink" title="深拷贝和浅拷贝在拷贝元组时的不同点"></a>深拷贝和浅拷贝在拷贝元组时的不同点</h2><p>在本次代码中，我们仅仅是把列表c，换成了元组，我们接着研究一下，copy.copy()在拷贝元组和列表时的不同点：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = (a, b)</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.copy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
+<p>再来看执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">139844088853128</span></span><br><span class="line"><span class="number">139844088853128</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure></p>
+<p>可以发现，e的地址指向了c的引用，这就证明了，对于copy.copy()来说，如果拷贝的是可变类型，那么只拷贝第一层；如果拷贝的是不可变类型，那么就不拷贝，相当于浅拷贝直接指向c的引用。<br><img src="/2019/03/13/深拷贝和浅拷贝/4.png" alt></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/13/深拷贝和浅拷贝/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/super随笔/" class="archive-article-date">
-  	<time datetime="2019-03-12T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/12/super随笔/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">super随笔</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/super随笔/">super随笔</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/08/super之回炉再造/" class="archive-article-date">
-  	<time datetime="2019-03-08T14:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/08/super之回炉再造/">super之回炉再造</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/python之super函数/" class="archive-article-date">
-  	<time datetime="2019-03-06T15:07:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/python之super函数/">python之super()函数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -308,8 +357,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
