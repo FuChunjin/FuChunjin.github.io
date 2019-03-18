@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Blog Of JustWander</title>
+  <title>python动态性之__slots__ | Blog Of JustWander</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Of JustWander">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="简介这里对python的动态性做一个小小的补充，python允许我们在外部给类或类的实例对象添加属性，但是如果我们想要限制属性的添加该怎么办呢？请看下面的例子：1234567891011121314import typesclass Person(object):	passif __name__ == &apos;__main__&apos;:	p1 = Person()	p1.name = &apos;tom&apos;	print(">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python动态性之__slots__">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/python动态性之-slots/index.html">
 <meta property="og:site_name" content="Blog Of JustWander">
+<meta property="og:description" content="简介这里对python的动态性做一个小小的补充，python允许我们在外部给类或类的实例对象添加属性，但是如果我们想要限制属性的添加该怎么办呢？请看下面的例子：1234567891011121314import typesclass Person(object):	passif __name__ == &apos;__main__&apos;:	p1 = Person()	p1.name = &apos;tom&apos;	print(">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-18T15:40:15.743Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog Of JustWander">
+<meta name="twitter:title" content="python动态性之__slots__">
+<meta name="twitter:description" content="简介这里对python的动态性做一个小小的补充，python允许我们在外部给类或类的实例对象添加属性，但是如果我们想要限制属性的添加该怎么办呢？请看下面的例子：1234567891011121314import typesclass Person(object):	passif __name__ == &apos;__main__&apos;:	p1 = Person()	p1.name = &apos;tom&apos;	print(">
   
     <link rel="alternative" href="/atom.xml" title="Blog Of JustWander" type="application/atom+xml">
   
@@ -151,16 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-python动态性之-slots" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python动态性之-slots" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/python动态性之-slots/">python动态性之__slots__</a>
+    <h1 class="article-title" itemprop="name">
+      python动态性之__slots__
     </h1>
   
 
@@ -192,276 +194,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/18/python动态性之-slots/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python动态添加属性以及方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/16/python动态添加属性以及方法/">python动态添加属性以及方法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/16/python动态添加属性以及方法/" class="archive-article-date">
-  	<time datetime="2019-03-16T13:26:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-动态语言的定义"><a href="#1-动态语言的定义" class="headerlink" title="1. 动态语言的定义"></a>1. 动态语言的定义</h2><p>动态编程语言 是 高级程序设计语言 的一个类别，在计算机科学领域已被广泛应用。它是一类 在运行时可以改变其结构的语言 ：例如新的函数、对象、甚至代码可以被引进，已有的函数可以被删除或是其他结构上的变化。动态语言目前非常具有活力。例如JavaScript便是一个动态语言，除此之外如 PHP 、 Ruby 、 Python 等也都属于动态语言，而 C 、 C++ 等语言则不属于动态语言。</p>
-<h2 id="2-运行的过程中给对象绑定-添加-属性"><a href="#2-运行的过程中给对象绑定-添加-属性" class="headerlink" title="2. 运行的过程中给对象绑定(添加)属性"></a>2. 运行的过程中给对象绑定(添加)属性</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name = None, age = None)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">P = Person(<span class="string">"fuchunjin"</span>, <span class="string">"24"</span>)</span><br><span class="line">print(P.name)</span><br><span class="line">print(P.age)</span><br></pre></td></tr></table></figure>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fuchunjin</span><br><span class="line"><span class="number">24</span></span><br></pre></td></tr></table></figure></p>
-<p>在这里，我们定义了1个类Person，在这个类里，定义了两个初始属性name和age，但是人还有性别啊！如果这个类不是你写的是不是你会尝试访问性别这个属性呢？<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">P.sex = <span class="string">"male"</span></span><br><span class="line">print(P.sex)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">male</span><br></pre></td></tr></table></figure></p>
-<p>这时候就发现问题了，我们定义的类里面没有sex这个属性啊！怎么回事呢？ 这就是动态语言的魅力和坑！这里实际上就是动态给实例绑定属性！</p>
-<h2 id="3-运行的过程中给类绑定-添加-属性"><a href="#3-运行的过程中给类绑定-添加-属性" class="headerlink" title="3. 运行的过程中给类绑定(添加)属性"></a>3. 运行的过程中给类绑定(添加)属性</h2><p>接下来，我们再创建一个实例对象P1，并尝试打印该对象的sex属性：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name = None, age = None)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">P = Person(<span class="string">"fuchunjin"</span>, <span class="string">"24"</span>)</span><br><span class="line">print(P.name)</span><br><span class="line">print(P.age)</span><br><span class="line"></span><br><span class="line">P.sex = <span class="string">"male"</span></span><br><span class="line">print(P.sex)</span><br><span class="line"></span><br><span class="line">P1 = Person(<span class="string">'Tom'</span>, <span class="number">21</span>)</span><br><span class="line">print(P1.sex)</span><br></pre></td></tr></table></figure></p>
-<p>我们尝试打印P1.sex，发现报错，P1没有sex这个属性！—- 给P这个实例绑定属性对P1这个实例不起作用！ 那我们要给所有的Person的实例加上sex属性怎么办呢？答案就是直接给Person绑定属性！请接着往下看！<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fuchunjin</span><br><span class="line"><span class="number">24</span></span><br><span class="line">male</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"test.py"</span>, line <span class="number">15</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    print(P1.sex)</span><br><span class="line">AttributeError: <span class="string">'Person'</span> object has no attribute <span class="string">'sex'</span></span><br></pre></td></tr></table></figure></p>
-<p>我们在下面的例子中尝试直接给类绑定一个属性：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name = None, age = None)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line"></span><br><span class="line">Person.sex = <span class="string">"male"</span></span><br><span class="line"></span><br><span class="line">P1 = Person(<span class="string">'Tom'</span>, <span class="number">21</span>)</span><br><span class="line">print(P1.sex)</span><br></pre></td></tr></table></figure></p>
-<p>我们来看执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">male</span><br></pre></td></tr></table></figure></p>
-<h2 id="4-运行的过程中给类绑定-添加-方法"><a href="#4-运行的过程中给类绑定-添加-方法" class="headerlink" title="4. 运行的过程中给类绑定(添加)方法"></a>4. 运行的过程中给类绑定(添加)方法</h2><p>我们直接给Person绑定sex这个属性，重新实例化P1后，P1就有sex这个属性了！ 那么function呢？怎么绑定？如果我们在模块中定义一个方法，而不是在类中定义一个方法，那么此时这个方法并不是对象的实例方法，但是我们可以将这个方法作为属性赋值给对象的某一个属性，我们可以尝试一下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, newName, newAge)</span>:</span></span><br><span class="line">        self.name = newName</span><br><span class="line">        self.age = newAge</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"-----%s is eating----"</span>%self.name)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">"-----%s is running----"</span>%self.name)</span><br><span class="line"></span><br><span class="line">p1 = Person(<span class="string">"p1"</span>, <span class="number">10</span>)</span><br><span class="line">p1.eat()</span><br><span class="line"><span class="comment">#将模块属性run赋值给对象属性</span></span><br><span class="line">p1.run = run</span><br><span class="line">p1.run()</span><br></pre></td></tr></table></figure></p>
-<p>我们执行以上代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-----p1 <span class="keyword">is</span> eating----</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"test.py"</span>, line <span class="number">18</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    p1.run()</span><br><span class="line">TypeError: run() missing <span class="number">1</span> required positional argument: <span class="string">'self'</span></span><br></pre></td></tr></table></figure></p>
-<p>然而执行后我们发现崩了，错误提示run()方法缺少self参数，实际上当我们调用run方法的时候，p1对象不会作为self参数传递到run方法内部，原因是run属性对应的方法并不是person对象的属性。这时，如果我们想让一个模块方法在调用的时候自动传入被调用对象作为self参数，那么可以使用typesMethodType()方法实现，我们尝试以下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, newName, newAge)</span>:</span></span><br><span class="line">        self.name = newName</span><br><span class="line">        self.age = newAge</span><br><span class="line">     </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">"-----%s is eating----"</span>%self.name)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">"-----%s is running----"</span>%self.name)</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line">p1 = Person(<span class="string">"p1"</span>, <span class="number">10</span>)</span><br><span class="line">p1.run = types.MethodType(run, p1)</span><br><span class="line">p1.run()</span><br></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-----p1 <span class="keyword">is</span> running----</span><br></pre></td></tr></table></figure></p>
-<p>我们来仔细的分析一下，该方法究竟做了哪些事：它的用法如下所示<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anotherRef=types.MethodType(methodName,instance)</span><br></pre></td></tr></table></figure></p>
-<p>其中第一个参数为一个方法名称，第二个参数是一个实例对象，表示将method绑定到instance对象上，是的，当method被调用的时候自动传入instance对象作为self参数。方法的返回值是一个method对象anotherRef，这个anotherRef实际上可以是任何一个名字，这个名字保存了methodName的引用，我们可以使用anotherRef引用调用方法，也就是anotherRef(),当anotherRef方法执行的时候实际上就是在执行methodName对应的方法，此时instance会作为methodName的默认参数传入到methodName中。<br><img src="/2019/03/16/python动态添加属性以及方法/2.png" alt></p>
-<h2 id="5-对types-MethodType-方法的一点引申"><a href="#5-对types-MethodType-方法的一点引申" class="headerlink" title="5. 对types.MethodType()方法的一点引申"></a>5. 对types.MethodType()方法的一点引申</h2><p>MethodType可以把外部函数(方法)绑定到类或类的实例中，下面我们分别举例说明它在绑定到类和类的实例中的不同特性：</p>
-<h4 id="（1）把方法绑定到类的实例中："><a href="#（1）把方法绑定到类的实例中：" class="headerlink" title="（1）把方法绑定到类的实例中："></a>（1）把方法绑定到类的实例中：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_name</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    self.name = name</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    s1 = Student()</span><br><span class="line">    s2 = Student()</span><br><span class="line">    s3 = Student()</span><br><span class="line"></span><br><span class="line">    wander1 = types.MethodType(set_name, s1)</span><br><span class="line">    wander2 = types.MethodType(set_name, s2)</span><br><span class="line"></span><br><span class="line">    wander1(<span class="string">'wander1'</span>)</span><br><span class="line">    wander2(<span class="string">'wander2'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        print(s1.name)</span><br><span class="line">        print(s2.name)</span><br><span class="line">        print(s3.name)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        print(e)</span><br></pre></td></tr></table></figure>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wander1</span><br><span class="line">wander2</span><br><span class="line"><span class="string">'Student'</span> object has no attribute <span class="string">'name'</span></span><br></pre></td></tr></table></figure></p>
-<p>运行之后可以发现，由于外部函数没有绑定到s3实例，s3.name是无法打印的。</p>
-<h4 id="（2）把方法绑定到类中"><a href="#（2）把方法绑定到类中" class="headerlink" title="（2）把方法绑定到类中"></a>（2）把方法绑定到类中</h4><p>下面的例子中，我们将外部函数绑定到类中，调用外部函数后，我们依次访问各个实例对象的属性，请看以下代码和执行结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_name</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    self.name = name</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line"></span><br><span class="line">    s1 = Student()</span><br><span class="line">    s2 = Student()</span><br><span class="line">    s3 = Student()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># link = types.MethodType(set_name, Student)</span></span><br><span class="line">    Student.set_name = types.MethodType(set_name, Student) <span class="comment"># 此时相当于给Student类添加了一个set_name类方法，该方法指向了外部函数，把self传进去</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># link('wander1')</span></span><br><span class="line">    s1.set_name(<span class="string">'wander1'</span>)</span><br><span class="line">    print(s1.name)</span><br><span class="line">    print(s2.name)</span><br><span class="line">    print(s3.name)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># link('wander2')</span></span><br><span class="line">    s2.set_name(<span class="string">'wander2'</span>)</span><br><span class="line">    print(s1.name)</span><br><span class="line">    print(s2.name)</span><br><span class="line">    print(s3.name)</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/16/python动态添加属性以及方法/1.png" alt><br>执行后：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wander1</span><br><span class="line">wander1</span><br><span class="line">wander1</span><br><span class="line">wander2</span><br><span class="line">wander2</span><br><span class="line">wander2</span><br></pre></td></tr></table></figure></p>
-<p>Student类本身并没有属性和方法，所以用这个类创建的实例也没有属性和方法。用MethodType将set_name方法绑定到Student类，并不是将这个方法直接写到Student类内部，而是在Student内存中创建一个link指向外部的方法，我们的代码注释中的link其实就指向了外部方法所占的内存空间，在创建Student实例的时候这个link也会被复制。所以不管创建多少实例，这些实例和Student类都指向同一个set_name方法。s1.set_name(‘wander1’)并没有在s1这个实例内部创建name属性，而是将name属性创建在外部set_name方法的内存区中。因为s1和s2内部link都指向外部set_name方法的内存区，所以不管s1还是s2在调用set_name方法的时候改变的是set_name方法内存区里的name属性，所以s2改了s1也就改了，如果新建一个实例s3在没有调用set_name方法的前提下也会有name属性，因为s3的link指向的set_name方法的内存区，而set_name之前被A或者B调用过了，这一点其实有点类似于修改全局变量的感觉。</p>
-<p>接下里我们来看，如果类本身也有其它设置name属性的方法呢？外部函数和内部函数竞争同一个属性，究竟谁会胜利呢？<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_name_self</span><span class="params">(self, name)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_name</span><span class="params">(self, name)</span>:</span></span><br><span class="line">    self.name = name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Student.set_name = types.MethodType(set_name, Student)</span><br><span class="line"></span><br><span class="line">s1 = Student()</span><br><span class="line">s2 = Student()</span><br><span class="line">s3 = Student()</span><br><span class="line"></span><br><span class="line">s1.set_name_self(<span class="string">'python'</span>)</span><br><span class="line">print(s1.name)</span><br><span class="line"></span><br><span class="line">s2.set_name(<span class="string">'JAVA'</span>)</span><br><span class="line">s2.set_name_self(<span class="string">'java'</span>)</span><br><span class="line">print(s1.name)</span><br><span class="line">print(s2.name)</span><br><span class="line">print(s3.name)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">python</span><br><span class="line">java</span><br><span class="line">JAVA</span><br></pre></td></tr></table></figure></p>
-<p>由此我们可以知道，外部函数的调用实际上并没有覆盖掉类本身的实例方法。</p>
-<h2 id="6-外部调用静态方法和类方法"><a href="#6-外部调用静态方法和类方法" class="headerlink" title="6. 外部调用静态方法和类方法"></a>6. 外部调用静态方法和类方法</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Game</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment"># 类属性</span></span><br><span class="line">    num = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 实例方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 实例属性</span></span><br><span class="line">        self.name = <span class="string">"laowang"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 类方法</span></span><br><span class="line"><span class="meta">@classmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_num</span><span class="params">(cls)</span>:</span></span><br><span class="line">    cls.num = <span class="number">100</span></span><br><span class="line">    print(Game.num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 静态方法</span></span><br><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_menu</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"----------------------"</span>)</span><br><span class="line">    print(<span class="string">"    穿越火线V11.1"</span>)</span><br><span class="line">    print(<span class="string">" 1. 开始游戏"</span>)</span><br><span class="line">    print(<span class="string">" 2. 结束游戏"</span>)</span><br><span class="line">    print(<span class="string">"----------------------"</span>)</span><br><span class="line"></span><br><span class="line">Game.xx = print_menu</span><br><span class="line">Game.xx()</span><br><span class="line"></span><br><span class="line">Game.ss = add_num</span><br><span class="line">Game.ss()</span><br></pre></td></tr></table></figure>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">----------------------</span><br><span class="line">    穿越火线V11<span class="number">.1</span></span><br><span class="line"> <span class="number">1.</span> 开始游戏</span><br><span class="line"> <span class="number">2.</span> 结束游戏</span><br><span class="line">----------------------</span><br><span class="line"><span class="number">100</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>通过以上的举例，我们对python语言的动态性有了更深的认识，它允许我们在不改变原有代码的前提下为一个类或对象添加新的功能，这在实际的开发中显得尤为重要。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/16/python动态添加属性以及方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-深拷贝和浅拷贝" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/13/深拷贝和浅拷贝/">深拷贝和浅拷贝</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/13/深拷贝和浅拷贝/" class="archive-article-date">
-  	<time datetime="2019-03-13T14:41:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="深拷贝和浅拷贝简析"><a href="#深拷贝和浅拷贝简析" class="headerlink" title="深拷贝和浅拷贝简析"></a>深拷贝和浅拷贝简析</h2><p>今天简单的聊一下python里面的深拷贝和浅拷贝，先来看一下代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line">b = a</span><br><span class="line"></span><br><span class="line">print(b)</span><br><span class="line">print(id(a))</span><br><span class="line">print(id(b))</span><br><span class="line">print(a == b)</span><br><span class="line">print(a <span class="keyword">is</span> b)</span><br></pre></td></tr></table></figure>
-<p>执行结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="number">139948120346248</span></span><br><span class="line"><span class="number">139948120346248</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br></pre></td></tr></table></figure>
-<p>我们发现python里面的赋值过程，并非是拷贝了这个对象，而仅仅是拷贝了这个对象的引用，通过打印a和b的内存地址我们也可以发现这一点。<br>像这种，仅仅是指向了对象的引用，并非是把原对象搬对来据为己有的这种赋值或者是拷贝，就是浅拷贝。</p>
-<p>那么什么是深拷贝呢？请看一下代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">c = copy.deepcopy(a)</span><br><span class="line">print(c)</span><br><span class="line">print(id(a))</span><br><span class="line">print(id(c))</span><br><span class="line">print(a == c)</span><br><span class="line">print(a <span class="keyword">is</span> c)</span><br></pre></td></tr></table></figure>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="number">140391002435208</span></span><br><span class="line"><span class="number">140391002435464</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure></p>
-<p>这里c相当于把a的一整套东西全都搬了过来，因此实现了深拷贝，并且自己有了新的地址空间。</p>
-<h2 id="再思考"><a href="#再思考" class="headerlink" title="再思考"></a>再思考</h2><p>这次我们首先引入两个列表：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br></pre></td></tr></table></figure>
-<p>然后，我们再创建一个列表c，把a和b的引用传进去：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c = [a, b]</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/13/深拷贝和浅拷贝/1.png" alt></p>
-<p>我们再创建一个列表e，这个列表保存了c的深拷贝：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.deepcopy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br></pre></td></tr></table></figure></p>
-<p>有一点我们可以肯定的是，c和e的地址肯定是不同的，但这里的疑问是，e里面肯定也保存了两个地址，那么这两个地址是否是a和b的引用呢？还是额外开辟的空间里面保存了a和b的内容呢？<br><img src="/2019/03/13/深拷贝和浅拷贝/2.png" alt></p>
-<p>我们编写以下的代码验证这个问题：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = [a, b]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.deepcopy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">139925641670472</span></span><br><span class="line"><span class="number">139925641661896</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure></p>
-<p>由此我们可以看出：e实际上连同a,b里面的内容也进行了深拷贝，这也证明深拷贝是一种递归拷贝。</p>
-<p>除了copy.deepcopy()，与它相对应的还有一种拷贝，就是copy.copy()，请看下面代码，只是把deepcopy换成了copy:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = [a, b]</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.copy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-<p>这次的执行结果还是有些区别的:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">140409381363528</span></span><br><span class="line"><span class="number">140409381354952</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure></p>
-<p>可以看到，copy.copy并没有把a和b的内容拷贝下来，整体来说，copy仅仅是拷贝了第一层，而deepcopy则是进行了递归拷贝，下面的这张图很好的说明了它们之间的区别：<br><img src="/2019/03/13/深拷贝和浅拷贝/3.png" alt></p>
-<h2 id="深拷贝和浅拷贝在拷贝元组时的不同点"><a href="#深拷贝和浅拷贝在拷贝元组时的不同点" class="headerlink" title="深拷贝和浅拷贝在拷贝元组时的不同点"></a>深拷贝和浅拷贝在拷贝元组时的不同点</h2><p>在本次代码中，我们仅仅是把列表c，换成了元组，我们接着研究一下，copy.copy()在拷贝元组和列表时的不同点：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</span><br><span class="line">c = (a, b)</span><br><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">e = copy.copy(c)</span><br><span class="line">print(id(c))</span><br><span class="line">print(id(e))</span><br><span class="line">a.append(<span class="number">10</span>)</span><br><span class="line">print(c[<span class="number">0</span>])</span><br><span class="line">print(e[<span class="number">0</span>])</span><br></pre></td></tr></table></figure></p>
-<p>再来看执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">139844088853128</span></span><br><span class="line"><span class="number">139844088853128</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">10</span>]</span><br></pre></td></tr></table></figure></p>
-<p>可以发现，e的地址指向了c的引用，这就证明了，对于copy.copy()来说，如果拷贝的是可变类型，那么只拷贝第一层；如果拷贝的是不可变类型，那么就不拷贝，相当于浅拷贝直接指向c的引用。<br><img src="/2019/03/13/深拷贝和浅拷贝/4.png" alt></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/13/深拷贝和浅拷贝/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-super随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/12/super随笔/">super随笔</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/12/super随笔/" class="archive-article-date">
-  	<time datetime="2019-03-12T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一点小引申"><a href="#一点小引申" class="headerlink" title="一点小引申"></a>一点小引申</h2><p>这几天一直在学习super()这个类，在我的前几篇blog中也记录了一些用法，其中的一个举例我想再次引申一下，请看以下源码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'a.__init__'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'b.__init__'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'c.__init__'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(A, B)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'d.__init__'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'e.__init__'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">F</span><span class="params">(D, E)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(A, self).__init__()</span><br><span class="line">        </span><br><span class="line">f = F()</span><br><span class="line">super(E, f).__init__()</span><br></pre></td></tr></table></figure>
-<p>执行结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.__init__</span><br><span class="line">b.__init__</span><br></pre></td></tr></table></figure></p>
-<p>我们通过super在外部调用了父类的初始化方法，这里要注意的是，这里因为是初始化方法，实际上会先调用 F() 对象的初始化方法，然后再调用父类的初始化<br>方法，一定要注意这里的调用顺序。</p>
-<p>在tornado中我们也可以对某些类进行封装，先来看一段tornado的一个小例子：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tornado的基础web框架模块</span></span><br><span class="line"><span class="keyword">import</span> tornado.web</span><br><span class="line"><span class="comment"># tornado的核心IO循环模块，封装了LINUX的epoll和BSD的kqueue,是tornado高效率的基础</span></span><br><span class="line"><span class="keyword">import</span> tornado.ioloop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一个业务处理类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexHandler</span><span class="params">(tornado.web.RequestHandler)</span>:</span></span><br><span class="line">    <span class="comment"># 处理get请求，不能处理post请求</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># 对应HTTP请求的方法，给浏览器响应信息</span></span><br><span class="line">        self.write(<span class="string">'Hello World'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># 实例化一个app的对象</span></span><br><span class="line">    <span class="comment"># Application是tornado web核心框架的核心应用类，是与服务器对应的接口</span></span><br><span class="line">    <span class="comment"># 里面包含了路由映射表，有一个listen方法，用来创建一个http服务器的实例，并绑定了端口</span></span><br><span class="line">    app = tornado.web.Application([(<span class="string">r'/'</span>, IndexHandler)])</span><br><span class="line">    <span class="comment"># 绑定监听端口 注意：此时服务器并没有开启监听！</span></span><br><span class="line">    app.listen(<span class="number">8000</span>)</span><br><span class="line">    <span class="comment"># IOLoop.current()：返回当前线程的IOLoop实例</span></span><br><span class="line">    <span class="comment"># start():启动IOLoop实例的I/O循环，同时开启了监听</span></span><br><span class="line">    tornado.ioloop.IOLoop.current().start()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></p>
-<p>为了实现封装，我们可以将所有的Handler写到一个index目录下，之后可以用index.***Handler进行调用；除此之外，我们可以将实例化的app对象独立出来，<br>为此，我们可以重新定义一个Application类，这个类继承tornado.web.Application父类，并重写初始化方法，在初始化方法里面，我们定义自己需要的所有<br>路由映射表和对应的Handler，并把它们当做参数，传给父类的初始化方法，请看下面的例子：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, a)</span>:</span></span><br><span class="line">            self.a = a</span><br><span class="line">       </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, b)</span>:</span></span><br><span class="line">        self.a = b</span><br><span class="line">        print(self.a)</span><br><span class="line">        a = <span class="number">10</span></span><br><span class="line">        super(B, self).__init__(a)</span><br><span class="line">    </span><br><span class="line">b = B(<span class="number">20</span>)</span><br><span class="line">print(b.a)</span><br></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<p>我们拿实际的tornado再来举一个例子：</p>
-<pre><code class="python"><span class="keyword">import</span> tornado.web
-<span class="keyword">from</span> views <span class="keyword">import</span> index
-
-<span class="class"><span class="keyword">class</span> <span class="title">Application</span><span class="params">(tornado.web.Application)</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span>
-        handlers = [
-            (<span class="string">r'/index'</span>, index.IndexHandler),    
-        ]
-        super(Application,self).__init__(handlers)
-</code></pre>
-
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -481,16 +233,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/12/super随笔/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/18/python动态性之-slots/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/16/python动态添加属性以及方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python动态添加属性以及方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -510,276 +321,14 @@
 
 
 
-
   
-    <article id="post-super之回炉再造" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/08/super之回炉再造/">super之回炉再造</a>
-    </h1>
   
 
-        
-        <a href="/2019/03/08/super之回炉再造/" class="archive-article-date">
-  	<time datetime="2019-03-08T14:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="再谈super"><a href="#再谈super" class="headerlink" title="再谈super"></a>再谈super</h1><p>Hello大家好，我的上一篇blog已经把super介绍的差不多了，可是还是存在一些问题，那就是在调用父类的过程中，self指向的问题，这也是理解super的关键所在，接下来让我们开始吧！</p>
-<h4 id="1-先来看一段代码"><a href="#1-先来看一段代码" class="headerlink" title="1. 先来看一段代码"></a>1. 先来看一段代码</h4><p>假如有A、B、C、D这4个类，继承关系如下，我们要在各子类方法中显式调用父类的方法（姑且不考虑是否符合需求）：</p>
-<p><img src="/2019/03/08/super之回炉再造/1-1.png" alt="图1"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'A.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C , self).fun()</span><br><span class="line">        print(<span class="string">'C.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B , C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D , self).fun()</span><br><span class="line">        print(<span class="string">'D.fun'</span>)</span><br><span class="line"></span><br><span class="line">D().fun()</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.fun</span><br><span class="line">C.fun</span><br><span class="line">B.fun</span><br><span class="line">D.fun</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-super与mro机制"><a href="#2-super与mro机制" class="headerlink" title="2. super与mro机制"></a>2. super与mro机制</h4><p>事实上，在每个类声明之后，Python都会自动为创建一个名为“<strong>mro</strong>”的内置属性，这个属性就是Python的MRO机制生成的，该属性是一个tuple，定义的是该类的方法解析顺序（继承顺序），当用super调用父类的方法时，会按照<strong>mro</strong>属性中的元素顺序去挨个查找方法。我们可以通过“类名.<strong>mro</strong>”或“类名.mro()”来查看上面代码中D类的<strong>mro</strong>属性值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(D.__mro__)</span><br><span class="line">print(D.mro())</span><br></pre></td></tr></table></figure>
-<p>输出结果为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class '__main__.D'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class '__main__.A'&gt;, &lt;class 'object'&gt;)</span><br><span class="line">[&lt;class '__main__.D'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class '__main__.A'&gt;, &lt;class 'object'&gt;]</span><br></pre></td></tr></table></figure>
-<p>一个是tuple，一个list，但本质上是一个东西。这个顺序是怎么生成的呢？在Python新式类中（Python3中也只存在新式类了），采用的是C3算法（可不是广度优先，更不是深度优先）。我们通过如下图所示的继承关系来简单介绍C3算法（箭头指向父类）。</p>
-<p><img src="/2019/03/08/super之回炉再造/1-2.png" alt="图2"></p>
-<p>当要生成F的继承顺序时，C3算法过程如下：首先将入度（指向该节点的箭头数量）为零的节点放入列表，并将F节点及与F节点有关的箭头从上图树中删除；继续找入度为0的节点，找到D和E，左侧优先，故而现将D放入列表，并从上图树中删除D，这是列表中就有了F、D。继续找入度为0的节点，有A和E满足，左侧优先，所以是A，将A从上图中取出放入列表，列表中顺序为F、D、E；接下来入度为0的节点只剩下E，取出E放入列表；只剩下B和C节点，且入度都为0，但左侧优先，二先将B放入列表，然后才是后才是C；不过别忘了，Python所有类都有一个共同的父类，那就是object类，所以，最好还会把object放入列表末尾。最终生成列表中元素顺序为：F-&gt;D-&gt;A-&gt;E-&gt;B-&gt;C-&gt;object。我们用代码验证一下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(A,B)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">F</span><span class="params">(D, E)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(F.__mro__)</span><br></pre></td></tr></table></figure></p>
-<p>输出结果为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class '__main__.F'&gt;, &lt;class '__main__.D'&gt;, &lt;class '__main__.A'&gt;, &lt;class '__main__.E'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class 'object'&gt;)</span><br></pre></td></tr></table></figure>
-<p>所以，图中的继承顺序为什么是D-&gt;B-&gt;C-&gt;A就好解释了。但还没弄清楚图1用super实现的代码输出顺序的问题，所以，我们还要继续看super的用法。</p>
-<h4 id="3-怎么用super"><a href="#3-怎么用super" class="headerlink" title="3. 怎么用super"></a>3. 怎么用super</h4><p>super是一个类（不是方法），实例化之后得到的是一个代理的对象，而不是得到了父类，并且我们使用这个代理对象来调用父类或者兄弟类的方法。使用格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super([type[, object-<span class="keyword">or</span>-type]])</span><br></pre></td></tr></table></figure>
-<p>将这个格式展开来就有一下几种传参方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super()</span><br><span class="line">super(type , obj)</span><br><span class="line">super(type_1 , type_2)</span><br></pre></td></tr></table></figure>
-<p>注意，可没有super(type)这种方式。下面说说上面三种传参方式。</p>
-<h6 id="3-1-super-type-obj"><a href="#3-1-super-type-obj" class="headerlink" title="3.1 super(type , obj)"></a>3.1 super(type , obj)</h6><p>先说super(type , obj)，这个方式要传入两个参数，第一个参数type必须是一个类名，第二个参数是一个该类的实例化对象，不过可以不是直接的实例化对象，该类的子类的实例化对象也行。在上文中已经说到，super会按照<strong>mro</strong>属性中的顺序去查找方法，super(type , obj)两个参数中type作用是定义在<strong>mro</strong>数组中的那个位置开始找，obj定义的是用哪个类的<strong>mro</strong>元素。我们用代码来说明，将图2的代码各个类中添加一个fun方法，继承关系不变，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'A.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'C.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(A,B)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'D.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'E.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">F</span><span class="params">(D, E)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'F.fun'</span>)</span><br></pre></td></tr></table></figure>
-<p>然后尝试super(type , obj)两个参数的不同组合，看看输出结果。</p>
-<p>先让obj都为F类的实例，尝试不同type下的输出结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super(E , F()).fun() <span class="comment"># 输出结果：B.fun</span></span><br><span class="line">super(D , F()).fun() <span class="comment"># 输出结果：A.fun</span></span><br><span class="line">super(F , F()).fun() <span class="comment"># 输出结果：D.fun</span></span><br></pre></td></tr></table></figure>
-<p>再回顾一下<strong>mro</strong>的顺序：F-&gt;D-&gt;A-&gt;E-&gt;B-&gt;C-&gt;object，发现规律没？调用的都是type对应的类在<strong>mro</strong>顺序中的下一个类的fun方法。所以，我们可以通过type参数来指定调用父类的范围。</p>
-<p>再让type保持不变，obj尝试不同的实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super(B , F()).fun() <span class="comment"># 输出结果：C.fun</span></span><br><span class="line">super(B , E()).fun() <span class="comment"># 输出结果：C.fun</span></span><br><span class="line">super(B , B()).fun() <span class="comment"># 这是错误的，会报错</span></span><br></pre></td></tr></table></figure>
-<p>发现规律了吗？上面这个类继承关系太简单，可能规律并不明显。事实上，obj参数指定的是用那个类的<strong>mro</strong>属性。</p>
-<p>好了，我们现在回到图2中使用super()之后的代码，来解释一下为什么输出顺序是A-&gt;C-&gt;B-&gt;D。首先我们要明白，D类的<strong>mro</strong>顺序是D-&gt;B-&gt;C-&gt;A，在D类中调用fun方法，然后在D类fun方法中遇到super(D , self).fun()，这个self指的是D类的实例化对象，所以用的是D类的<strong>mro</strong>顺序，而且指明位置是D后面也就是B类，所以继续调用B类的fun方法，遇到super(B , self).fun()，这时候需要注意，这里的self还是原来的D类实例（千万注意不是B类实例），所以还是用D类的<strong>mro</strong>顺序，那就继续调用下一个C类的fun方法，同理继续调用下一个父类，也就是A类的fun方法，执行完A类的fun方法后，回到C的fun方法中，打印输出，然后回到B类的fun方法，知道D类的fun方法打印输出完。懂了吗？</p>
-<h6 id="3-2-super"><a href="#3-2-super" class="headerlink" title="3.2 super()"></a>3.2 super()</h6><p>super()事实上是懒人版的super(type , obj)，这种方式只能用在类体内部，Python会自动把两个参数填充上，type指代当前类，obj指导当前类的实例对象，相当于super(<strong>class</strong> , self)。所以，以下三种代码是完全等效的：</p>
-<p>代码一：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure>
-<p>代码二：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>代码三：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(__class__ , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure></p>
-<h6 id="3-3-super-type-1-type-2"><a href="#3-3-super-type-1-type-2" class="headerlink" title="3.3 super(type_1 , type_2)"></a>3.3 super(type_1 , type_2)</h6><p>当super传入的两个参数都是类名是，type_2必须是type_1的子类。功能上与super(type , obj)有什么不同呢？我们继续上一小节的代码输出测试：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F())) <span class="comment">#输出结果为：&lt;super: &lt;class 'F'&gt;, &lt;F object&gt;&gt;</span></span><br><span class="line">print(super(F , F)) <span class="comment">#输出结果为：&lt;super: &lt;class 'F'&gt;, &lt;F object&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>输出结果是一样的，那你就以为super(type_1 , type_2)与super(type , obj)一样吗？看下面输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F()).fun()) <span class="comment">#输出结果为：D.fun</span></span><br><span class="line">print(super(F , F).fun()) <span class="comment"># 报错：TypeError: fun() missing 1 required positional argument: 'self'</span></span><br></pre></td></tr></table></figure>
-<p>所以，super(type_1 , type_2)与super(type , obj)有区别，在看一下下列输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F()).fun)<span class="comment"># 输出结果：&lt;bound method D.fun of &lt;__main__.F object at 0x000001BD44A98B38&gt;&gt;</span></span><br><span class="line">print(super(F , F).fun) <span class="comment"># 输出结果：&lt;function D.fun at 0x000001BD44A9EE18&gt;</span></span><br><span class="line">print(D.fun) <span class="comment"># 输出结果：&lt;function D.fun at 0x000001BD44A9EE18&gt;</span></span><br></pre></td></tr></table></figure>
-<p>所以，当super传入的两个传输都是类时，得到的就是一个指向继承顺序下的类的代理（说白了就是D的一个代理类），并未绑定实例，要调用D类的fun方法，还需传入实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F).fun(F())) <span class="comment">#输出结果：D.fun</span></span><br></pre></td></tr></table></figure>
-<p>所以，当super传入的两个参数都是类的时候，最好只用来调用类的静态方法或者类方法。</p>
-<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><p>最好，在实际写代码时，最好不要用诸如super(self.<strong>class</strong>, self) 的写法，容易导致异常，super 的第一个参数尽量为当前的类。至此，super的总结就结束了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/08/super之回炉再造/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-python之super函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/06/python之super函数/">python之super()函数</a>
-    </h1>
   
 
-        
-        <a href="/2019/03/06/python之super函数/" class="archive-article-date">
-  	<time datetime="2019-03-06T15:07:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h4 id="说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"><a href="#说起python中的super-函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。" class="headerlink" title="说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。"></a>说起python中的super()函数，大家可能感觉不是很陌生，该函数在基于子类重写父类方法的前提下，实现了对父类中相同方法的调用。</h4><h4 id="本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。"><a href="#本篇文章采用简单明了的举例，以期获得对super-函数更进一步的理解。" class="headerlink" title="本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。"></a>本篇文章采用简单明了的举例，以期获得对super()函数更进一步的理解。</h4><h2 id="实验前的注意点"><a href="#实验前的注意点" class="headerlink" title="实验前的注意点"></a>实验前的注意点</h2><h4 id="（一）-关于新式类"><a href="#（一）-关于新式类" class="headerlink" title="（一） 关于新式类"></a>（一） 关于新式类</h4><p>本文默认采用的是Python3，也就是说：本文所定义的类都是新式类。如果你用到是Python2的话，记得继承object。<br>在这里，为了避免出现不必要的麻烦，我们最好全部继承object类。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python 3</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="（二）-一点小小的区别"><a href="#（二）-一点小小的区别" class="headerlink" title="（二） 一点小小的区别"></a>（二） 一点小小的区别</h4><p>Python3可以使用直接使用 super().xxx 代替 super(Class, self).xxx<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认，Python 3</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        super().add(x)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 2</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        super(B, self).add(x)</span><br></pre></td></tr></table></figure></p>
-<p>所以，你如果用的是Python2的话，记得将本文的super()替换为suepr(Class, self)。</p>
-<h4 id="（三）-单继承"><a href="#（三）-单继承" class="headerlink" title="（三） 单继承"></a>（三） 单继承</h4><p>在单继承中，spuer()主要是用来调用父类方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_A is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        self.x += y</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">20</span></span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_B is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">a = A()</span><br><span class="line">b = B()</span><br><span class="line"></span><br><span class="line">print(a.x)</span><br><span class="line">print(b.x)</span><br><span class="line"></span><br><span class="line">a.add(<span class="number">1</span>)</span><br><span class="line">b.add(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">print(b.x)</span><br><span class="line">print(a.x)</span><br></pre></td></tr></table></figure></p>
-<p>代码执行后结果会是什么样呢？</p>
-<pre><code>10
-20
-self_A is at &lt;__main__.A object at 0x7f1b10adbb38&gt;
-self_B is at &lt;__main__.B object at 0x7f1b10adbb70&gt;
-self_A is at &lt;__main__.B object at 0x7f1b10adbb70&gt;
-26
-11
-</code></pre><p>是不是对执行结果感到一丝丝疑惑呢？下面我们来对代码的执行过程做一个深入解读：</p>
-<p>首先创建了 a, b 两个对象<br>然后分别打印了两个对象的初始化属性 x 的值， 分别是 10 和 20，<br>接下来，对象a调用实例中的add()方法，打印了实例对象a所在的地址，<br>也就是self_A is at &lt;<strong>main</strong>.A object at 0x7f1b10adbb38&gt;，并将实例属性 x 的值加上传入的参数 y；<br>之后实例对象b调用重写之后的add()方法，并传入参数 y=1，首先打印出实例对象b所在的内存地址，接着调用父类的add()方法，<br>此时，父类的self指向了实例对象b的引用，并执行相应的代码，此时 b.x = 21，<br>最后执行self.x += 5，此时 b.x = 26</p>
-<h4 id="（四）-多继承"><a href="#（四）-多继承" class="headerlink" title="（四） 多继承"></a>（四） 多继承</h4><p>我们继续引入类C和类D</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">4</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_C is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">4</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        print(<span class="string">'self_D is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        super().add(y)</span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">  </span><br><span class="line">执行以下代码</span><br><span class="line"></span><br><span class="line">    d = D()</span><br><span class="line">    d.add(<span class="number">2</span>)</span><br><span class="line">    print(d.x)</span><br></pre></td></tr></table></figure>
-<p>输出结果为<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">self_D <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_B <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_C <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line">self_A <span class="keyword">is</span> at &lt;__main__.D object at <span class="number">0x7f7aa0ebbf60</span>&gt;</span><br><span class="line"><span class="number">21</span></span><br></pre></td></tr></table></figure></p>
-<p>下面我们来具体分析一下:</p>
-<p>D 的 MRO 是: [D, B, C, A, object] 。 备注: 可以通过 D.mro() (Python 2 使用 D.__mro__ ) 来查看 D 的 MRO 信息）</p>
-<p>详细的代码分析如下:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第四步</span></span><br><span class="line">        <span class="comment"># 来自 D.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        self.x += y</span><br><span class="line">        <span class="comment"># d.x == 7</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">20</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第二步</span></span><br><span class="line">        <span class="comment"># 来自 D.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self_B is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 suepr(B, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 B 之后的 [C, A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第六步</span></span><br><span class="line">        <span class="comment"># d.x = 11</span></span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">        <span class="comment"># d.x = 16</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">4</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第三步</span></span><br><span class="line">        <span class="comment"># 来自 B.add 中的 super</span></span><br><span class="line">        <span class="comment"># self == d, self.x == d.x == 5</span></span><br><span class="line">        print(<span class="string">'self_C is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 suepr(C, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 C 之后的 [A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第五步</span></span><br><span class="line">        <span class="comment"># d.x = 7</span></span><br><span class="line">        self.x += <span class="number">4</span></span><br><span class="line">        <span class="comment"># d.x = 11</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.x = <span class="number">5</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, y)</span>:</span></span><br><span class="line">        <span class="comment"># 第一步</span></span><br><span class="line">        print(<span class="string">'self_D is at &#123;0&#125;'</span>.format(self))</span><br><span class="line">        <span class="comment"># 等价于 super(D, self).add(y)</span></span><br><span class="line">        <span class="comment"># self 的 MRO 是 [D, B, C, A, object]</span></span><br><span class="line">        <span class="comment"># 从 D 之后的 [B, C, A, object] 中查找 add 方法</span></span><br><span class="line">        super().add(y)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 第七步</span></span><br><span class="line">        <span class="comment"># d.x = 16</span></span><br><span class="line">        self.x += <span class="number">5</span></span><br><span class="line">        <span class="comment"># self.x = 21</span></span><br><span class="line"></span><br><span class="line">d = D()</span><br><span class="line">d.add(<span class="number">2</span>)</span><br><span class="line">print(d.x)</span><br></pre></td></tr></table></figure></p>
-<p>调用过程如下图：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">D.mro() == [D, B, C, A, object]</span><br><span class="line">d = D()</span><br><span class="line">d.n == <span class="number">5</span></span><br><span class="line">d.add(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>:</span>          <span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span>            <span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span>             <span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>       <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>      <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span>       <span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(self, m)</span>:</span></span><br><span class="line">        super().add(m)  1.---&gt;  super().add(m) 2.---&gt;  super().add(m)  3.---&gt;  self.n += m</span><br><span class="line">        self.n += <span class="number">5</span>   &lt;-----<span class="number">-6.</span> self.n += <span class="number">3</span>    &lt;---<span class="number">-5.</span> self.n += <span class="number">4</span>     &lt;---<span class="number">-4.</span> &lt;--|</span><br><span class="line">        (<span class="number">14</span>+<span class="number">5</span>=<span class="number">19</span>)               (<span class="number">11</span>+<span class="number">3</span>=<span class="number">14</span>)              (<span class="number">7</span>+<span class="number">4</span>=<span class="number">11</span>)                (<span class="number">5</span>+<span class="number">2</span>=<span class="number">7</span>)</span><br></pre></td></tr></table></figure></p>
-<p><img src="/2019/03/06/python之super函数/2.png" alt></p>
-<h4 id="（五）-super方法和普通方法的区别"><a href="#（五）-super方法和普通方法的区别" class="headerlink" title="（五） super方法和普通方法的区别"></a>（五） super方法和普通方法的区别</h4><p>假设Base是基类<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">print</span> “Base init”</span><br></pre></td></tr></table></figure></p>
-<p>则普通方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Base)</span>:</span></span><br><span class="line">   <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">          Base.__init__(self)</span><br><span class="line">          <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
-<p>super方法如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
-<p>在上面的简单场景下，两种方法的效果一致：</p>
-<pre><code>&gt;&gt;&gt; leaf = Leaf()
-
-Base init
-
-Leaf init
-</code></pre><h4 id="（六）钻石继承的挑战"><a href="#（六）钻石继承的挑战" class="headerlink" title="（六）钻石继承的挑战"></a>（六）钻石继承的挑战</h4><p>当我们来到钻石继承场景时，我们就遇到了一个难题：<br><img src="/2019/03/06/python之super函数/1.png" alt></p>
-<p>尝试以下代码：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              <span class="keyword">print</span> “Base init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium1</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Base.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Medium1 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium2</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Base.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Medium2 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              Medium1.__init__(self)</span><br><span class="line">              Medium2.__init__(self)</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
-<p>当我们生成Leaf对象时，会产生以下问题：</p>
-<pre><code>&gt;&gt;&gt; leaf = Leaf()
-
-Base init
-
-Medium1 init
-
-Base init
-
-Medium2 init
-
-Leaf init
-</code></pre><p>可以看到Base被初始化了两次！这是由于Medium1和Medium2各自调用了Base的初始化函数导致的。</p>
-<h4 id="（七）各语言的解决方法"><a href="#（七）各语言的解决方法" class="headerlink" title="（七）各语言的解决方法"></a>（七）各语言的解决方法</h4><p>钻石继承中，父类被多次初始化是个非常难缠的问题，我们来看看其他各个语言是如何解决这个问题的：</p>
-<h5 id="C"><a href="#C" class="headerlink" title="C++"></a>C++</h5><p>C++使用虚拟继承来解决钻石继承问题。</p>
-<p>Medium1和Medium2虚拟继承Base。当生成Leaf对象时，Medium1和Medium2并不会自动调用虚拟基类Base的构造函数，而需要由Leaf的构造函数显式调用Base的构造函数。</p>
-<h5 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h5><p>Java禁止使用多继承。</p>
-<p>Java使用单继承+接口实现的方式来替代多继承，避免了钻石继承产生的各种问题。</p>
-<h5 id="Ruby"><a href="#Ruby" class="headerlink" title="Ruby"></a>Ruby</h5><p>Ruby禁止使用多继承。</p>
-<p>Ruby和Java一样只支持单继承，但它对多继承的替代方式和Java不同。Ruby使用Mixin的方式来替代，在当前类中mixin入其他模块，来做到代码的组装效果。</p>
-<h5 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h5><p>Python和C++一样，支持多继承的语法。但Python的解决思路和C++完全不一样，Python使用的是super</p>
-<p>我们把第2章的钻石继承用super重写一下，看一下输出结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span><span class="params">(object)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              <span class="keyword">print</span> “Base init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium1</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Medium1, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Medium1 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Medium2</span><span class="params">(Base)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Medium2, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Medium2 init”</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure></p>
-<p>我们生成Leaf对象</p>
-<pre><code>&gt;&gt;&gt; leaf = Leaf()
-
-Base init
-
-Medium2 init
-
-Medium1 init
-
-Leaf init
-</code></pre><p>可以看到整个初始化过程符合我们的预期，Base只被初始化了1次。而且重要的是，相比原来的普通写法，super方法并没有写额外的代码，也没有引入额外的概念</p>
-<h4 id="（八）更加深入的理解super内核：mro"><a href="#（八）更加深入的理解super内核：mro" class="headerlink" title="（八）更加深入的理解super内核：mro"></a>（八）更加深入的理解super内核：mro</h4><p>要理解super的原理，就要先了解mro。mro是method resolution order的缩写，表示了类继承体系中的成员解析顺序。</p>
-<p>在python中，每个类都有一个mro的类方法。我们来看一下钻石继承中，Leaf类的mro是什么样子的：</p>
-<pre><code>&gt;&gt;&gt; Leaf.mro()
-
-[&lt;class &apos;__main__.Leaf&apos;&gt;, &lt;class &apos;__main__.Medium1&apos;&gt;, &lt;class &apos;__main__.Medium2&apos;&gt;, &lt;class &apos;__main__.Base&apos;&gt;, &lt;type &apos;object&apos;&gt;]
-</code></pre><p>可以看到mro方法返回的是一个祖先类的列表。Leaf的每个祖先都在其中出现一次，这也是super在父类中查找成员的顺序。 </p>
-<p>通过mro，python巧妙地将多继承的图结构，转变为list的顺序结构。super在继承体系中向上的查找过程，变成了在mro中向右的线性查找过程，任何类都只会被处理一次。</p>
-<p>通过这个方法，python解决了多继承中的2大难题：</p>
-<p>1.查找顺序问题。从Leaf的mro顺序可以看出，如果Leaf类通过super来访问父类成员，那么Medium1的成员会在Medium2之前被首先访问到。如果Medium1和Medium2都没有找到，最后再到Base中查找。</p>
-<p>2.钻石继承的多次初始化问题。在mro的list中，Base类只出现了一次。事实上任何类都只会在mro list中出现一次。这就确保了super向上调用的过程中，任何祖先类的方法都只会被执行一次。</p>
-<h4 id="（九）super的用法"><a href="#（九）super的用法" class="headerlink" title="（九）super的用法"></a>（九）super的用法</h4><p>我们首先来看一下python中的super文档</p>
-<pre><code>&gt;&gt;&gt; help(super)
-
-Help on class super in module __builtin__:
-
-class super(object)
-    super(type, obj) -&gt; bound super object; requires isinstance(obj, type)
-    super(type) -&gt; unbound super object
-    super(type, type2) -&gt; bound super object; requires issubclass(type2, type)
-</code></pre><p>光从字面来看，这可以算是python中最语焉不详的帮助文档之一了。甚至里面还有一些术语误用。那super究竟应该怎么用呢，我们重点来看super中的第1和第3种用法</p>
-<h5 id="1-super-type-obj"><a href="#1-super-type-obj" class="headerlink" title="1. super(type, obj)"></a>1. super(type, obj)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">              super(Leaf, self).__init__()</span><br><span class="line">              <span class="keyword">print</span> “Leaf init”</span><br></pre></td></tr></table></figure>
-<p>super(Leaf, self).<strong>init</strong>()的意思是说：</p>
-<pre><code>1.获取self所属类的mro, 也就是[Leaf, Medium1, Medium2, Base]
-2.从mro中Leaf右边的一个类开始，依次寻找__init__函数。这里是从Medium1开始寻找
-3.一旦找到，就把找到的__init__函数绑定到self对象，并返回
-</code></pre><p>从这个执行流程可以看到，如果我们不想调用Medium1的<strong>init</strong>，而想要调用Medium2的<strong>init</strong>，那么super应该写成：super(Medium1, self)<strong>init</strong>() </p>
-<h5 id="2-super-type-type2"><a href="#2-super-type-type2" class="headerlink" title="2. super(type, type2)"></a>2. super(type, type2)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Leaf</span><span class="params">(Medium1, Medium2)</span>:</span></span><br><span class="line">       <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls)</span>:</span></span><br><span class="line">              obj = super(Leaf, cls).__new__(cls)</span><br><span class="line">              <span class="keyword">print</span> “Leaf new”</span><br><span class="line">              <span class="keyword">return</span> obj</span><br></pre></td></tr></table></figure>
-<p>super(Leaf, cls).<strong>new</strong>(cls)的意思是说：</p>
-<pre><code>1.获取cls这个类的mro，这里也是[Leaf, Medium1, Medium2, Base]
-2.从mro中Leaf右边的一个类开始，依次寻找__new__函数
-3.一旦找到，就返回“非绑定”的__new__函数
-</code></pre><p>由于返回的是非绑定的函数对象，因此调用时不能省略函数的第一个参数。这也是这里调用<strong>new</strong>时，需要传入参数cls的原因<br>同样的，如果我们想从某个mro的某个位置开始查找，只需要修改super的第一个参数就行</p>
-<p>原文链接：<a href="http://www.cnblogs.com/testview/p/4651198.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="noopener">http://www.cnblogs.com/testview/p/4651198.html?utm_source=tuicool&amp;utm_medium=referral</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/06/python之super函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -802,8 +351,8 @@ class super(object)
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
