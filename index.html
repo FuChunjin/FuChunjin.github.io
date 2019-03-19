@@ -153,6 +153,85 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-几种设置属性的方法对比" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/19/几种设置属性的方法对比/">几种设置属性的方法对比</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/19/几种设置属性的方法对比/" class="archive-article-date">
+  	<time datetime="2019-03-19T14:08:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="思维闪现"><a href="#思维闪现" class="headerlink" title="思维闪现"></a>思维闪现</h2><p>接着上一次的随笔讨论，我们还是以设置属性举例，以下代码简单的说明了一个对象的init方法，类方法以及外部函数对属性的设置，以及优先权：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">	hands = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.hands = <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_hands</span><span class="params">(self, num)</span>:</span></span><br><span class="line">	self.hands = num</span><br><span class="line"></span><br><span class="line">p1 = Person()</span><br><span class="line">print(p1.hands)</span><br><span class="line">print(Person.hands)</span><br><span class="line"></span><br><span class="line">p1.set_hands = types.MethodType(set_hands, p1)</span><br><span class="line">p1.set_hands(<span class="number">10</span>)</span><br><span class="line">print(p1.hands)</span><br><span class="line">print(Person.hands)</span><br></pre></td></tr></table></figure>
+<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure></p>
+<p>接下来，我们将types.MethodType(set_hands, p1)里面的p1换成Person会怎么样呢？<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> types</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">(object)</span>:</span></span><br><span class="line">	hands = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">		self.hands = <span class="number">20</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_hands</span><span class="params">(self, num)</span>:</span></span><br><span class="line">	self.hands = num</span><br><span class="line"></span><br><span class="line">p1 = Person()</span><br><span class="line">print(p1.hands)</span><br><span class="line">print(Person.hands)</span><br><span class="line"></span><br><span class="line">p1.set_hands = types.MethodType(set_hands, Person)</span><br><span class="line">p1.set_hands(<span class="number">10</span>)</span><br><span class="line">print(p1.hands)</span><br><span class="line">print(Person.hands)</span><br></pre></td></tr></table></figure></p>
+<p>执行结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">20</span></span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<p>至此我们实际上可以总结出以下的规律：实例化的对象调用init方法设置属性的优先权是要高于调用类属性的，如果实例对象没有init方法，那么会选择调用类属性里面的值进行补充，而MethodType既可以对类属性进行修改，也可以对实例属性进行修改，关键是要看外部函数到底是绑定了谁。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/19/几种设置属性的方法对比/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-python动态性之-slots" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
