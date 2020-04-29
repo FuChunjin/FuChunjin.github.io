@@ -6,23 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>super之回炉再造 | Blog Of JustWander</title>
+  <title>Archives: 2020 | Blog Of JustWander</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="再谈superHello大家好，我的上一篇blog已经把super介绍的差不多了，可是还是存在一些问题，那就是在调用父类的过程中，self指向的问题，这也是理解super的关键所在，接下来让我们开始吧！ 1. 先来看一段代码假如有A、B、C、D这4个类，继承关系如下，我们要在各子类方法中显式调用父类的方法（姑且不考虑是否符合需求）：  1234567891011121314151617181920">
-<meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="super之回炉再造">
-<meta property="og:url" content="http://yoursite.com/2019/03/08/super之回炉再造/index.html">
+  <meta name="keywords" content="python,后端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验&quot;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog Of JustWander">
+<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
 <meta property="og:site_name" content="Blog Of JustWander">
-<meta property="og:description" content="再谈superHello大家好，我的上一篇blog已经把super介绍的差不多了，可是还是存在一些问题，那就是在调用父类的过程中，self指向的问题，这也是理解super的关键所在，接下来让我们开始吧！ 1. 先来看一段代码假如有A、B、C、D这4个类，继承关系如下，我们要在各子类方法中显式调用父类的方法（姑且不考虑是否符合需求）：  1234567891011121314151617181920">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/03/08/super之回炉再造/1-1.png">
-<meta property="og:image" content="http://yoursite.com/2019/03/08/super之回炉再造/1-2.png">
-<meta property="og:updated_time" content="2019-03-08T15:55:17.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="super之回炉再造">
-<meta name="twitter:description" content="再谈superHello大家好，我的上一篇blog已经把super介绍的差不多了，可是还是存在一些问题，那就是在调用父类的过程中，self指向的问题，这也是理解super的关键所在，接下来让我们开始吧！ 1. 先来看一段代码假如有A、B、C、D这4个类，继承关系如下，我们要在各子类方法中显式调用父类的方法（姑且不考虑是否符合需求）：  1234567891011121314151617181920">
-<meta name="twitter:image" content="http://yoursite.com/2019/03/08/super之回炉再造/1-1.png">
+<meta name="twitter:title" content="Blog Of JustWander">
   
     <link rel="alternative" href="/atom.xml" title="Blog Of JustWander" type="application/atom+xml">
   
@@ -158,209 +151,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-super之回炉再造" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      super之回炉再造
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/29/Y9000X购买以及刷机/" class="archive-article-date">
+  	<time datetime="2020-04-29T04:17:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/29/Y9000X购买以及刷机/">Y9000X购买以及刷机</a>
     </h1>
   
 
-        
-        <a href="/2019/03/08/super之回炉再造/" class="archive-article-date">
-  	<time datetime="2019-03-08T14:40:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="再谈super"><a href="#再谈super" class="headerlink" title="再谈super"></a>再谈super</h1><p>Hello大家好，我的上一篇blog已经把super介绍的差不多了，可是还是存在一些问题，那就是在调用父类的过程中，self指向的问题，这也是理解super的关键所在，接下来让我们开始吧！</p>
-<h4 id="1-先来看一段代码"><a href="#1-先来看一段代码" class="headerlink" title="1. 先来看一段代码"></a>1. 先来看一段代码</h4><p>假如有A、B、C、D这4个类，继承关系如下，我们要在各子类方法中显式调用父类的方法（姑且不考虑是否符合需求）：</p>
-<p><img src="/2019/03/08/super之回炉再造/1-1.png" alt="图1"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'A.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(C , self).fun()</span><br><span class="line">        print(<span class="string">'C.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B , C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(D , self).fun()</span><br><span class="line">        print(<span class="string">'D.fun'</span>)</span><br><span class="line"></span><br><span class="line">D().fun()</span><br></pre></td></tr></table></figure>
-<p>输出结果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A.fun</span><br><span class="line">C.fun</span><br><span class="line">B.fun</span><br><span class="line">D.fun</span><br></pre></td></tr></table></figure></p>
-<h4 id="2-super与mro机制"><a href="#2-super与mro机制" class="headerlink" title="2. super与mro机制"></a>2. super与mro机制</h4><p>事实上，在每个类声明之后，Python都会自动为创建一个名为“<strong>mro</strong>”的内置属性，这个属性就是Python的MRO机制生成的，该属性是一个tuple，定义的是该类的方法解析顺序（继承顺序），当用super调用父类的方法时，会按照<strong>mro</strong>属性中的元素顺序去挨个查找方法。我们可以通过“类名.<strong>mro</strong>”或“类名.mro()”来查看上面代码中D类的<strong>mro</strong>属性值：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(D.__mro__)</span><br><span class="line">print(D.mro())</span><br></pre></td></tr></table></figure>
-<p>输出结果为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class '__main__.D'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class '__main__.A'&gt;, &lt;class 'object'&gt;)</span><br><span class="line">[&lt;class '__main__.D'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class '__main__.A'&gt;, &lt;class 'object'&gt;]</span><br></pre></td></tr></table></figure>
-<p>一个是tuple，一个list，但本质上是一个东西。这个顺序是怎么生成的呢？在Python新式类中（Python3中也只存在新式类了），采用的是C3算法（可不是广度优先，更不是深度优先）。我们通过如下图所示的继承关系来简单介绍C3算法（箭头指向父类）。</p>
-<p><img src="/2019/03/08/super之回炉再造/1-2.png" alt="图2"></p>
-<p>当要生成F的继承顺序时，C3算法过程如下：首先将入度（指向该节点的箭头数量）为零的节点放入列表，并将F节点及与F节点有关的箭头从上图树中删除；继续找入度为0的节点，找到D和E，左侧优先，故而现将D放入列表，并从上图树中删除D，这是列表中就有了F、D。继续找入度为0的节点，有A和E满足，左侧优先，所以是A，将A从上图中取出放入列表，列表中顺序为F、D、E；接下来入度为0的节点只剩下E，取出E放入列表；只剩下B和C节点，且入度都为0，但左侧优先，二先将B放入列表，然后才是后才是C；不过别忘了，Python所有类都有一个共同的父类，那就是object类，所以，最好还会把object放入列表末尾。最终生成列表中元素顺序为：F-&gt;D-&gt;A-&gt;E-&gt;B-&gt;C-&gt;object。我们用代码验证一下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(A,B)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">F</span><span class="params">(D, E)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">print(F.__mro__)</span><br></pre></td></tr></table></figure></p>
-<p>输出结果为：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&lt;class '__main__.F'&gt;, &lt;class '__main__.D'&gt;, &lt;class '__main__.A'&gt;, &lt;class '__main__.E'&gt;, &lt;class '__main__.B'&gt;, &lt;class '__main__.C'&gt;, &lt;class 'object'&gt;)</span><br></pre></td></tr></table></figure>
-<p>所以，图中的继承顺序为什么是D-&gt;B-&gt;C-&gt;A就好解释了。但还没弄清楚图1用super实现的代码输出顺序的问题，所以，我们还要继续看super的用法。</p>
-<h4 id="3-怎么用super"><a href="#3-怎么用super" class="headerlink" title="3. 怎么用super"></a>3. 怎么用super</h4><p>super是一个类（不是方法），实例化之后得到的是一个代理的对象，而不是得到了父类，并且我们使用这个代理对象来调用父类或者兄弟类的方法。使用格式如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super([type[, object-<span class="keyword">or</span>-type]])</span><br></pre></td></tr></table></figure>
-<p>将这个格式展开来就有一下几种传参方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super()</span><br><span class="line">super(type , obj)</span><br><span class="line">super(type_1 , type_2)</span><br></pre></td></tr></table></figure>
-<p>注意，可没有super(type)这种方式。下面说说上面三种传参方式。</p>
-<h6 id="3-1-super-type-obj"><a href="#3-1-super-type-obj" class="headerlink" title="3.1 super(type , obj)"></a>3.1 super(type , obj)</h6><p>先说super(type , obj)，这个方式要传入两个参数，第一个参数type必须是一个类名，第二个参数是一个该类的实例化对象，不过可以不是直接的实例化对象，该类的子类的实例化对象也行。在上文中已经说到，super会按照<strong>mro</strong>属性中的顺序去查找方法，super(type , obj)两个参数中type作用是定义在<strong>mro</strong>数组中的那个位置开始找，obj定义的是用哪个类的<strong>mro</strong>元素。我们用代码来说明，将图2的代码各个类中添加一个fun方法，继承关系不变，代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'A.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'C.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(A,B)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'D.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">E</span><span class="params">(B, C)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'E.fun'</span>)</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">F</span><span class="params">(D, E)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'F.fun'</span>)</span><br></pre></td></tr></table></figure>
-<p>然后尝试super(type , obj)两个参数的不同组合，看看输出结果。</p>
-<p>先让obj都为F类的实例，尝试不同type下的输出结果：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super(E , F()).fun() <span class="comment"># 输出结果：B.fun</span></span><br><span class="line">super(D , F()).fun() <span class="comment"># 输出结果：A.fun</span></span><br><span class="line">super(F , F()).fun() <span class="comment"># 输出结果：D.fun</span></span><br></pre></td></tr></table></figure>
-<p>再回顾一下<strong>mro</strong>的顺序：F-&gt;D-&gt;A-&gt;E-&gt;B-&gt;C-&gt;object，发现规律没？调用的都是type对应的类在<strong>mro</strong>顺序中的下一个类的fun方法。所以，我们可以通过type参数来指定调用父类的范围。</p>
-<p>再让type保持不变，obj尝试不同的实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">super(B , F()).fun() <span class="comment"># 输出结果：C.fun</span></span><br><span class="line">super(B , E()).fun() <span class="comment"># 输出结果：C.fun</span></span><br><span class="line">super(B , B()).fun() <span class="comment"># 这是错误的，会报错</span></span><br></pre></td></tr></table></figure>
-<p>发现规律了吗？上面这个类继承关系太简单，可能规律并不明显。事实上，obj参数指定的是用那个类的<strong>mro</strong>属性。</p>
-<p>好了，我们现在回到图2中使用super()之后的代码，来解释一下为什么输出顺序是A-&gt;C-&gt;B-&gt;D。首先我们要明白，D类的<strong>mro</strong>顺序是D-&gt;B-&gt;C-&gt;A，在D类中调用fun方法，然后在D类fun方法中遇到super(D , self).fun()，这个self指的是D类的实例化对象，所以用的是D类的<strong>mro</strong>顺序，而且指明位置是D后面也就是B类，所以继续调用B类的fun方法，遇到super(B , self).fun()，这时候需要注意，这里的self还是原来的D类实例（千万注意不是B类实例），所以还是用D类的<strong>mro</strong>顺序，那就继续调用下一个C类的fun方法，同理继续调用下一个父类，也就是A类的fun方法，执行完A类的fun方法后，回到C的fun方法中，打印输出，然后回到B类的fun方法，知道D类的fun方法打印输出完。懂了吗？</p>
-<h6 id="3-2-super"><a href="#3-2-super" class="headerlink" title="3.2 super()"></a>3.2 super()</h6><p>super()事实上是懒人版的super(type , obj)，这种方式只能用在类体内部，Python会自动把两个参数填充上，type指代当前类，obj指导当前类的实例对象，相当于super(<strong>class</strong> , self)。所以，以下三种代码是完全等效的：</p>
-<p>代码一：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super().fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure>
-<p>代码二：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(B , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure></p>
-<p>代码三：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">(self)</span>:</span></span><br><span class="line">        super(__class__ , self).fun()</span><br><span class="line">        print(<span class="string">'B.fun'</span>)</span><br></pre></td></tr></table></figure></p>
-<h6 id="3-3-super-type-1-type-2"><a href="#3-3-super-type-1-type-2" class="headerlink" title="3.3 super(type_1 , type_2)"></a>3.3 super(type_1 , type_2)</h6><p>当super传入的两个参数都是类名是，type_2必须是type_1的子类。功能上与super(type , obj)有什么不同呢？我们继续上一小节的代码输出测试：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F())) <span class="comment">#输出结果为：&lt;super: &lt;class 'F'&gt;, &lt;F object&gt;&gt;</span></span><br><span class="line">print(super(F , F)) <span class="comment">#输出结果为：&lt;super: &lt;class 'F'&gt;, &lt;F object&gt;&gt;</span></span><br></pre></td></tr></table></figure>
-<p>输出结果是一样的，那你就以为super(type_1 , type_2)与super(type , obj)一样吗？看下面输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F()).fun()) <span class="comment">#输出结果为：D.fun</span></span><br><span class="line">print(super(F , F).fun()) <span class="comment"># 报错：TypeError: fun() missing 1 required positional argument: 'self'</span></span><br></pre></td></tr></table></figure>
-<p>所以，super(type_1 , type_2)与super(type , obj)有区别，在看一下下列输出：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F()).fun)<span class="comment"># 输出结果：&lt;bound method D.fun of &lt;__main__.F object at 0x000001BD44A98B38&gt;&gt;</span></span><br><span class="line">print(super(F , F).fun) <span class="comment"># 输出结果：&lt;function D.fun at 0x000001BD44A9EE18&gt;</span></span><br><span class="line">print(D.fun) <span class="comment"># 输出结果：&lt;function D.fun at 0x000001BD44A9EE18&gt;</span></span><br></pre></td></tr></table></figure>
-<p>所以，当super传入的两个传输都是类时，得到的就是一个指向继承顺序下的类的代理（说白了就是D的一个代理类），并未绑定实例，要调用D类的fun方法，还需传入实例：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(super(F , F).fun(F())) <span class="comment">#输出结果：D.fun</span></span><br></pre></td></tr></table></figure>
-<p>所以，当super传入的两个参数都是类的时候，最好只用来调用类的静态方法或者类方法。</p>
-<h4 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h4><p>最好，在实际写代码时，最好不要用诸如super(self.<strong>class</strong>, self) 的写法，容易导致异常，super 的第一个参数尽量为当前的类。至此，super的总结就结束了。</p>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">转录组之装机篇</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-      
+          
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/08/super之回炉再造/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/03/12/super随笔/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          super随笔
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/03/06/python之super函数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python之super()函数</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -383,8 +227,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
